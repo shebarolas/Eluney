@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:ital@0;1&family=Permanent+Marker&display=swap');
+.navbar{
+    height:4rem;
+    width:100%;
+    background-color: transparent;
+}
+.content{
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: 4rem 1fr;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.424); */
+}
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.optionsL, .optionsR{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    color: black;
+}
+.border{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 2rem;
+    width: 5rem;
+    border-radius:.3rem;
+    cursor: pointer;
+}
+.border:hover{
+    transition: .2s;
+    background-color: rgb(86, 86, 249)
+
+}
+.imgs{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
