@@ -31,6 +31,7 @@ export default function Hero() {
                 <div className="images">
                     <Sliders/>
                 </div>
-            </div>
+        
+     </div>
   )
 }
