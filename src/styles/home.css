@@ -1,3 +1,28 @@
 .nosotros{
-    
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    width: 40rem;
+    height:30rem;
+}
+.h1{
+    font-size : 3rem;
+
+}
+.globals{
+    display: grid;
+    place-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgb(30, 154, 30);
+}
+.imagen{
+    height:20rem;
+    width:20rem;
+}
+.infos{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+
 }
