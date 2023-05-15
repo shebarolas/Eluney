@@ -5,8 +5,8 @@ export const Home = () => {
   return (
     <>
         <Hero/>
-        <div>
-            
+        <div className="nosotros">
+            <h1 className='h1'>Hola</h1>
         </div>
     </>
   )

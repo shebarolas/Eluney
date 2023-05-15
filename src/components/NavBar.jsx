@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/navbar.css';
 import logo from '../imgs/logo.jpg'
+import { DrawBar } from './Home/DrawBar';
 
 
 export const NavBar = () => {
@@ -18,6 +19,9 @@ export const NavBar = () => {
                 <div className="optionsR ">
                     <span className="border">Nosotros</span>
                     <span className="border">Contacto</span>
+                </div>
+                <div className="barra">
+                    <DrawBar/>
                 </div>
             </div>
         </div>

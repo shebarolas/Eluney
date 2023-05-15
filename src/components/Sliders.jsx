@@ -6,15 +6,20 @@ import caba3 from "../imgs/cafeteria 2.jpg"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/slider.css';
+import { ImageGal } from './ImageGal';
 
 export const Sliders = () => {
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
-        speed: 500,
+        speed: 5000,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+
       };
+
   return (
     <Slider {...settings} className="slider">
         <div className="images">
