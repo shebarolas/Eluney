@@ -10,17 +10,25 @@
     grid-template-rows: 4rem 1fr;
     height: 4rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.424);
+    background-color: rgba(0, 0, 0, 0.689);
 }
 .nav{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 10rem;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
 }
-.optionsL, .optionsR{
+.optionsL{
     display:grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+}
+.optionsR{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     gap: 2rem;
@@ -48,6 +56,9 @@
 }
 body{
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Montserrat,sans-serif!important;
     overflow-x: hidden;
+}
+.barra{
+    color: black;
 }

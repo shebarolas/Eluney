@@ -10,6 +10,7 @@ import {
     Button,
   } from '@chakra-ui/react'
 import {TfiMenu} from 'react-icons/tfi'
+import { Link } from 'react-router-dom';
   
 
 export const DrawBar = () => {
@@ -29,6 +30,7 @@ export const DrawBar = () => {
             <p className='lbar'>Servicios</p>
             <p className='lbar'>Nosotros</p>
             <p className='lbar'>Contactos</p>
+            <Link to="/galeria" className="lbar"><p className='lbar'>Galeria</p></Link>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

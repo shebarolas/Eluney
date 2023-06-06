@@ -2,6 +2,8 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { LayoutMain } from './Layouts/LayoutMain';
+import { Galeria } from './pages/Galeria';
+import { Servicios } from './pages/Servicios';
 
 function App() {
 
@@ -13,6 +15,14 @@ function App() {
         {
           path: "/",
           element: <Home/>
+        },
+        {
+          path: "/galeria",
+          element: <Galeria/>
+        },
+        {
+          path: "/servicios",
+          element: <Servicios/>
         }
       ]
     }

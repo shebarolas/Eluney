@@ -1,0 +1,38 @@
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    width: 50rem;
+    background-color: gray;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.all{
+    display: grid;
+    place-items: center;
+}
+.imgL{
+    height:21rem;
+    width:20rem;
+}
+.imgR{
+    height:10rem;
+    width: 20rem;
+}
+.modalCont{
+    display: grid !important;
+    grid-template-rows: 5rem 1fr 5rem;
+    width: 60rem !important;
+}
+.imgC{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+    place-items: center;
+
+}
+.arriba{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}

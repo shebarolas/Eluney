@@ -1,3 +1,12 @@
 .css-79z5gx{
     padding: 0 !important;
 }
+.css-1u2cvaz{
+    display: grid !important;
+    grid-template-columns: 1fr;
+    place-items: center !important;
+    width: 100% !important;
+}
+.css-pv22qu{
+    max-width: none !important;
+}

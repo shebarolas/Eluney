@@ -1,0 +1,14 @@
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.todo{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    height: auto;
+    width: 100%;
+    place-items: center;
+    background-color: gray;
+}

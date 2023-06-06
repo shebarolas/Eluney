@@ -14,7 +14,7 @@ export default function Hero() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 2 }}
                         >
-                            Cabanas y Cafeteria Eluney
+                            Cafeteria y Cabañas Eluney
                         </motion.h1>
                     </div>
                     <div className="textoR">

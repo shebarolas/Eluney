@@ -12,17 +12,19 @@
 .globals{
     display: grid;
     place-items: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    height: 20rem;
+    width:100%;
     background-color: rgb(30, 154, 30);
 }
 .imagen{
-    height:20rem;
-    width:20rem;
+    height:18rem;
+    -webkit-box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.75);
 }
 .infos{
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr;
-
+    background-color: white;
 }
