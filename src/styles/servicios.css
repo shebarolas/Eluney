@@ -8,16 +8,18 @@
     font-size: 2rem;
 }
 .cardss{
-    display: grid;
-    grid-template-columns: 3rem 1fr;
-    place-items: center;
-    width: 10rem;
-    height: 10rem;
-    background-color: gray;
-    border-radius: 50%;
+    display: grid !important;
+    grid-template-columns: 3rem 1fr !important;
+    place-items: center !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    background-color: gray !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    white-space: normal !important;
 }
 .cardss:hover{
-    background-color: rgb(170, 170, 170);
+    background-color: rgb(170, 170, 170) !important;
 }
 .serviD{
     margin-top: 2rem;
@@ -28,6 +30,9 @@
     gap: 2rem;
 }
 .textSer{
-    font-size: .7rem;
-    text-align: center;
+    font-size: .7rem !important;
+    text-align: center !important;
+}
+.servis{
+    height: 30rem;
 }
