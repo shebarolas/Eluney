@@ -24,12 +24,6 @@ export const Formulario = () => {
                     placeholder="Asunto"
                     className='borderF'
                 />
-                <input type="radio" />
-                <textarea
-                    name="mensaje"
-                    placeholder="Mensaje"
-                    className='borderF'
-                />
                 <button type="submit" className="btn">Enviar</button>
             </form>
        </div>  

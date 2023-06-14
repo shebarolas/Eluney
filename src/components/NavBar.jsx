@@ -18,7 +18,7 @@ export const NavBar = () => {
                         <img src={logo} alt="logo" className="imgs" />
                     </div>
                     <div className="optionsR ">
-                        <span className="border">Nosotros</span>
+                        <Link to={'/nosotros'}><span className="border">Nosotros</span></Link>
                         <span className="border">Contacto</span>
                         <div className="barra">
                             <DrawBar />
