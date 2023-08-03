@@ -3,11 +3,11 @@ import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Di
 import '../styles/cards.css'
 import caba2 from "../imgs/Cabañas.jpg"
 import { Modals } from './Gallery/Modals'
-import { ModalsR } from './Gallery/ModalsR'
+import { ModalsL } from './Gallery/ModalsL'
 
-export const Cards = () => {
-    return (
-        <>
+export const CardsR = () => {
+  return (
+    <>
             <Card maxW='sm'>
                 <CardBody>
                     <Image
@@ -17,7 +17,7 @@ export const Cards = () => {
                         className='imgsC'
                     />
                     <Stack mt='6' spacing='3'>
-                        <Heading size='md'>Cabaña Coigue</Heading>
+                        <Heading size='md'>Cabaña Laurel</Heading>
                         <Text>
                         Bienvenidos a nuestras acogedoras cabañas diseñadas especialmente para brindar comodidad y disfrute a grupos de hasta 5 personas. 
                         Ubicadas en un entorno natural privilegiado, 
@@ -28,11 +28,11 @@ export const Cards = () => {
                 <Divider />
                 <CardFooter>
                     <ButtonGroup spacing='2'>
-                        <ModalsR/>
+                        <ModalsL/>
                         <Modals/>
                     </ButtonGroup>
                 </CardFooter>
             </Card>
         </>
-    )
+  )
 }

@@ -16,18 +16,6 @@ function App() {
         {
           path: "/",
           element: <Home/>
-        },
-        {
-          path: "/galeria",
-          element: <Galeria/>
-        },
-        {
-          path: "/servicios",
-          element: <Servicios/>
-        },
-        {
-          path: "/nosotros",
-          element: <Nosotros/>
         }
       ]
     }

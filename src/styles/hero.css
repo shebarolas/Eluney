@@ -19,14 +19,13 @@
     width: 20rem;
 }
 .textoL{
-    font-size: 2rem;
+    font-size: 10rem;
     font-weight: bold;
 }
-.global{
-    position: absolute;
-    background-color: #000000b0;
-    height: auto;
-    width: 40rem;
-    display: grid;
-    place-items: center;
+
+
+.logoss{
+    height:15rem;
+    width:15rem;
+    border-radius: 50%;
 }

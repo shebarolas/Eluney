@@ -42,6 +42,7 @@
     width: 5rem;
     border-radius:.3rem;
     cursor: pointer;
+    border: none !important;
 }
 .border:hover{
     transition: .2s;
@@ -61,4 +62,8 @@ body{
 }
 .barra{
     color: black;
+}
+
+option{
+    background: none !important;
 }

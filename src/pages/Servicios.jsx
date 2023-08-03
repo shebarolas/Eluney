@@ -4,21 +4,21 @@ import '../styles/servicios.css'
 import { FcHome, FcWiFiLogo } from "react-icons/fc";
 import { FaTree, FaPaw, FaMugHot } from "react-icons/fa";
 import { ModalS } from '../components/Service/ModalS';
+import { Foot } from '../components/Foot';
 
 export const Servicios = () => {
     return (
-        <div className='servicios'>
-            <Hero />
+        <div id='cabanas' className='servicios'>
             <div className="servis">
                 <div className="ser">
                     <h1 className='textS'>Servicios</h1>
                     <div className="serviD">
-                       
-                            {/* <FcHome size={30} />
+
+                        {/* <FcHome size={30} />
                             <span className="textSer">
                                 Cabañas para maximo 5 personas
                             </span> */}
-                            <ModalS/>
+                        <ModalS />
                         <div className="cardss">
                             <FcWiFiLogo size={30} />
                             <span className='textSer'>Con Wifi satelital</span>
@@ -38,7 +38,6 @@ export const Servicios = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import Slider from "react-slick";
-import caba1 from "../imgs/cabañas invierno.jpg"
-import caba2 from "../imgs/Cabañas.jpg"
-import caba3 from "../imgs/cafeteria 2.jpg"
+import caba1 from "../imgs/banner1.jpg"
+import caba2 from "../imgs/banner2.jpg"
+import caba3 from "../imgs/banner3.jpg"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/slider.css';

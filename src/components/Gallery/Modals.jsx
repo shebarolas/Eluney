@@ -30,18 +30,6 @@ export const Modals = () => {
                     <ModalCloseButton />
                     <ModalBody>
                         <div className="all">
-                            {/* <div className="gallery">
-                                <div className="imgG">
-                                    <img src={caba1} alt="" className='imgL' />
-                                </div>
-                                <div className="imgC">
-                                    <div className="arriba">
-                                        <img src={caba2} alt="" className='imgR' />
-                                        <img src={caba3} alt="" className='imgR' />
-                                    </div>
-                                    <img src={caba1} alt="" className='imgR' />
-                                </div>
-                            </div> */}
                             <Sliders/>
                         </div>
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/navbar.css';
 import logo from '../imgs/logo.jpg'
-import { DrawBar } from './Home/DrawBar';
-import { Link } from 'react-router-dom';
+import { Select } from '@chakra-ui/react'
+import { Link } from 'react-scroll';
 
 
 export const NavBar = () => {
@@ -11,18 +11,22 @@ export const NavBar = () => {
             <div className="content">
                 <div className="nav">
                     <div className="optionsL ">
-                        <Link to={'/'}><span className='border'>Inicio</span></Link>
-                        <Link to={'/servicios'}><span className='border'>Servicios</span></Link>
+                        <a href=""><span className='border'>Inicio</span></a>
+                        <select className="border" placeholder='Servicios' 
+                        // onchange={window.location.href = this.value}
+                        >
+                            <option value="#turismo">Servicio Cabañas</option>
+                            <option >Servicio Cafeteria</option>
+                            <option>Servicio Turismo</option>
+                        </select>
                     </div>
                     <div className="logo">
                         <img src={logo} alt="logo" className="imgs" />
                     </div>
                     <div className="optionsR ">
-                        <Link to={'/nosotros'}><span className="border">Nosotros</span></Link>
-                        <span className="border">Contacto</span>
-                        <div className="barra">
-                            <DrawBar />
-                        </div>
+                        <a href="#turismo"><span className='border' style={{width:"8rem"}}>Sitio Turisticos</span></a>
+                        <a href="#galeria"><span className="border">Cabañas</span></a>
+                        <a href="#nosotros"><span className="border">Nosotros</span></a>
                     </div>
                 </div>
             </div>

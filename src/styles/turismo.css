@@ -1,0 +1,22 @@
+.salImg{
+    height: 20rem;
+    width: 15rem;
+    object-fit: cover;
+}
+.turismo{
+    display: grid;
+    width: 100%;
+    padding: 2rem;
+    place-items: center;
+    gap: 2rem;
+}
+.saltoA{
+    display: grid;
+    width: 100%;
+    justify-items: center;
+}
+.imgSal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem
+}

@@ -16,12 +16,11 @@ import { Acordings } from './Acordings';
 import moment from 'moment';
 const { RangePicker } = DatePicker;
 
-export const ModalsR = () => {
-
+export const ModalsL = () => {
     const [email, setEmail] = useState("");
     const [nombre, setNombre] = useState("");
     const [apellidos, setApellidos] = useState("");
-    const [cabañas, setCabañas] = useState("Cabaña Coigue");
+    const [cabañas, setCabañas] = useState("Cabaña Laurel");
     const [personas, setPersonas] = useState("");
     const [fecha, setFecha] = useState("");
     const [dias, setDias] = useState("");
@@ -108,9 +107,8 @@ export const ModalsR = () => {
                         <div className="globalMod">
                             <div className="cabaI">
                                 <span className="cabInfo">
-                                    Cabaña Coigue ofrece alojamiento con WiFi gratuita en Pucón, a 32 km de la cascada Ojos del Caburgua, a 42 km de Ski Pucón y
-                                    a 45 km del parque nacional de Huerquehue.
-                                    Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
+                                El Cafeteria y Cabañas Eluney - Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua. 
+                                Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 </span>
                                 <span className="cabInfo">
                                     El Checkin para las cabañas debe ser despues de las 15:00 hrs.

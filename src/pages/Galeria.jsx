@@ -1,20 +1,18 @@
 import React from 'react'
-import Hero from '../components/Home/Hero'
 import { Cards } from '../components/Cards'
 import '../styles/galeria.css'
+import { CardsR } from '../components/CardsR'
 
 export const Galeria = () => {
     return (
-        <div className="galeria">
-            <Hero />
+        <div id='galeria' className="galeria">
             <div className="todo">
+                <h1 className="textS">Cabañas</h1>
                 <div className="cards">
                     <Cards />
-                    <Cards />
-                    <Cards />
+                    <CardsR />
                 </div>
             </div>
-
         </div>
     )
 }

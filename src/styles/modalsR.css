@@ -1,6 +1,6 @@
 .borderI{
     border: 1px solid gray;
-    border-radius:.5rem;
+    border-radius:.3rem;
     height: 2rem;
     width: 15rem;
     padding: .5rem;
@@ -10,9 +10,13 @@
 }
 .alls{
     display: grid;
-    grid-template-rows: repeat(4, 2rem);
+    grid-template-rows: repeat(8, 2rem);
     place-items: center;
-    gap: .5rem;
+    width: min-content;
+    gap: .7rem;
+    padding: 2rem;
+    background-color: gray;
+    border-radius:.2rem;
 }
 .globalMod{
     display: grid;
@@ -23,3 +27,22 @@
     grid-template-columns:14rem 1fr;
     place-items: center;
 }
+.c{
+    z-index: 1 !important;
+}
+.cabaI{
+    display: grid;
+    grid-template-rows: 8rem 2rem 2rem ;
+}
+.cabInfo{
+    font-size: .9rem;
+}
+.tods{
+    display: grid;
+    width:100%;
+    place-items: center;
+}
+.cantD{
+    color: white;
+}
+

@@ -1,8 +1,10 @@
 .imagesS{
-    height:20rem;
+    height:30rem;
     width: 20rem;
+    object-fit: cover;
 }
 .sliders{
-    height:20rem;
+    height:30rem;
     width: 30rem;
+    object-fit: cover;  
 }

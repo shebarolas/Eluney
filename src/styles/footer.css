@@ -1,0 +1,26 @@
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    place-items: center;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.689);
+    color: white;
+}
+.logos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    cursor: pointer;
+    gap: 2rem;
+}
+.informacions{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    place-items: center;
+}
+.fotLogo{
+    height:5rem;
+    width:5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}

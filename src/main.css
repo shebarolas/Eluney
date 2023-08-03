@@ -10,3 +10,9 @@
 .css-pv22qu{
     max-width: none !important;
 }
+.ant-picker-dropdown{
+    z-index: 10000 !important;
+}
+html{
+    scroll-behavior: smooth;
+}
