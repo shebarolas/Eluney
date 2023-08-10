@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/navbar.css';
-import logo from '../imgs/logo.jpg'
-import { Select } from '@chakra-ui/react'
-import { Link } from 'react-scroll';
+import logo from '../imgs/logoE.jpg'
+// import { Select } from '@chakra-ui/react'
+// import { Link } from 'react-scroll';
 
 
 export const NavBar = () => {
@@ -12,13 +12,9 @@ export const NavBar = () => {
                 <div className="nav">
                     <div className="optionsL ">
                         <a href=""><span className='border'>Inicio</span></a>
-                        <select className="border" placeholder='Servicios' 
-                        // onchange={window.location.href = this.value}
-                        >
-                            <option value="#turismo">Servicio Cabañas</option>
-                            <option >Servicio Cafeteria</option>
-                            <option>Servicio Turismo</option>
-                        </select>
+                        <a href="#cafeteria"><span className='border'>Cafeteria</span></a>
+                        <a href=""><span className='border'>Turismo</span></a>
+
                     </div>
                     <div className="logo">
                         <img src={logo} alt="logo" className="imgs" />
@@ -26,7 +22,7 @@ export const NavBar = () => {
                     <div className="optionsR ">
                         <a href="#turismo"><span className='border' style={{width:"8rem"}}>Sitio Turisticos</span></a>
                         <a href="#galeria"><span className="border">Cabañas</span></a>
-                        <a href="#nosotros"><span className="border">Nosotros</span></a>
+                        <a href="#nosotros"><span className="border">Ubicación</span></a>
                     </div>
                 </div>
             </div>

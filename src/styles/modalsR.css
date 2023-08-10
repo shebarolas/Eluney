@@ -32,10 +32,13 @@
 }
 .cabaI{
     display: grid;
-    grid-template-rows: 8rem 2rem 2rem ;
+    grid-template-rows: 8rem 2rem 2rem 4rem ;
 }
 .cabInfo{
     font-size: .9rem;
+}
+.blod{
+    font-weight: bold;
 }
 .tods{
     display: grid;

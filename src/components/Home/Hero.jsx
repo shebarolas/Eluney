@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Sliders } from '../Sliders';
-import logo from '../../imgs/logo.jpg'
+import logo from '../../imgs/logoE.jpg'
 import '../../styles/hero.css';
 
 export default function Hero() {

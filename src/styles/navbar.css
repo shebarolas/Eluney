@@ -8,19 +8,20 @@
     z-index: 1;
     display: grid;
     grid-template-rows: 4rem 1fr;
-    height: 4rem;
+    height: 5rem;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.689);
 }
 .nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    height: inherit;
     align-items: center;
     justify-items: center;
 }
 .optionsL{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
     gap: 2rem;
@@ -31,16 +32,17 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     color: white;
 }
 .border{
     display: grid;
     align-items: center;
     justify-items: center;
-    height: 2rem;
+    height: 2.5rem;
     width: 5rem;
     border-radius:.3rem;
+    font-size: 1.1rem;
     cursor: pointer;
     border: none !important;
 }

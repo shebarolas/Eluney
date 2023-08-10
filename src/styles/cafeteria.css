@@ -4,6 +4,8 @@
     place-items: center;
     padding: 2rem;
     gap: 2rem;
+    margin-top: 2rem;
+    background-color: gray;
 }
 .imgsCafe{
     height: 11rem;
@@ -22,6 +24,11 @@
     gap: 1rem;
 }
 .grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.grid2{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;

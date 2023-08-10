@@ -28,3 +28,18 @@
     grid-template-columns: 1fr 1fr;
     background-color: white;
 }
+.home{
+    display: grid;
+    place-items: center;    
+    width: 40rem;
+    gap: 1rem;
+}
+.homes{
+    padding: 3rem;
+    width: 100%;   
+    display: grid;
+    place-items: center;
+}
+.textH{
+    font-size:2rem;
+}

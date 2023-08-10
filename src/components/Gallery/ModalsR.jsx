@@ -41,12 +41,13 @@ export const ModalsR = () => {
             cabañas: cabañas,
             personas: personas,
             fecha: fecha,
+            checkIn: checkIn,
             mascotas: mascotas,
             valor: valor,
             dias: dias
         }
 
-        await fetch(`http://localhost:9000/massage/enviar`, {
+        await fetch(`https://eager-romantic-tarragon.glitch.me/massage/enviar`, {
             method: "POST",
             body: JSON.stringify(dataSend),
             headers: {
@@ -90,7 +91,7 @@ export const ModalsR = () => {
       };
 
     const disabledDateTime = () => ({
-        disabledHours: () => range(0, 15).splice(4, 20),
+        disabledHours: () => range(0, 15),
         disabledMinutes: () => range(30, 60),
         disabledSeconds: () => [55, 56],
     });
@@ -112,11 +113,12 @@ export const ModalsR = () => {
                                     a 45 km del parque nacional de Huerquehue.
                                     Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 </span>
-                                <span className="cabInfo">
+                                <span className='cabInfo blod'>Valor Referencial: 60.000 clp</span>
+                                <span className="cabInfo blod">
                                     El Checkin para las cabañas debe ser despues de las 15:00 hrs.
                                 </span>
                                 <span className="cabInfo">
-                                    Todas las mañanas se sirve un desayuno a la carta.
+                                    Todas las mañanas se sirve un desayuno a la carta (El desayuno se paga aparte)
                                 </span>
                                 <Acordings />
                             </div>
@@ -135,7 +137,7 @@ export const ModalsR = () => {
                                     />
                                     <TimePicker
                                         disabledTime={disabledDateTime}
-                                        onChange={(e) => console.log(e)}
+                                        onChange={(e)=> setCheckIn(e.$H + ":" + e.$m)}
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
@@ -144,7 +146,7 @@ export const ModalsR = () => {
 
                                     </div>
                                     <div className="children">
-                                        <label for="hijos" className="cantD">Tiene mascotas</label>
+                                        <label for="mascotas" className="cantD">Tiene mascotas</label>
                                         <input type="checkbox" id="mascotas" name="mascotas" value="mascotas" onChange={(e) => setMascotas(e.target.value)} />
                                     </div>
                                     <Button onClick={sendEmail}>Enviar</Button>

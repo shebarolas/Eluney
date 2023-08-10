@@ -89,7 +89,7 @@ export const ModalsL = () => {
       };
 
     const disabledDateTime = () => ({
-        disabledHours: () => range(0, 15).splice(4, 20),
+        disabledHours: () => range(0, 15),
         disabledMinutes: () => range(30, 60),
         disabledSeconds: () => [55, 56],
     });
@@ -110,7 +110,8 @@ export const ModalsL = () => {
                                 El Cafeteria y Cabañas Eluney - Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua. 
                                 Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 </span>
-                                <span className="cabInfo">
+                                <span className='cabInfo blod'>Valor Referencial: 60.000 clp</span>
+                                <span className="cabInfo blod">
                                     El Checkin para las cabañas debe ser despues de las 15:00 hrs.
                                 </span>
                                 <span className="cabInfo">
@@ -145,7 +146,7 @@ export const ModalsL = () => {
                                         <label for="hijos" className="cantD">Tiene mascotas</label>
                                         <input type="checkbox" id="mascotas" name="mascotas" value="mascotas" onChange={(e) => setMascotas(e.target.value)} />
                                     </div>
-                                    <Button onClick={sendEmail}>Enviar</Button>
+                                    <Button >Enviar</Button>
                                 </div>
                             </div>
                         </div>

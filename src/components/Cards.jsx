@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Image, Stack, Heading, Text, Divider, ButtonGroup, Button } from '@chakra-ui/react'
 import '../styles/cards.css'
-import caba2 from "../imgs/Cabañas.jpg"
+import caba2 from "../imgs/nieve.jpg"
 import { Modals } from './Gallery/Modals'
 import { ModalsR } from './Gallery/ModalsR'
 
