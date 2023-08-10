@@ -40,6 +40,7 @@ export const ModalsL = () => {
             cabañas: cabañas,
             personas: personas,
             fecha: fecha,
+            checkIn: checkIn,
             mascotas: mascotas,
             valor: valor,
             dias: dias
@@ -72,7 +73,7 @@ export const ModalsL = () => {
             const endDate = dates[1].toDate();
             const days = moment(endDate).diff(moment(startDate), 'days');
             setDias(days);
-            const precio = 60000;
+            const precio = 70000;
             setValor(precio * days);
             setFecha(dateString);
         }
@@ -110,7 +111,7 @@ export const ModalsL = () => {
                                 El Cafeteria y Cabañas Eluney - Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua. 
                                 Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 </span>
-                                <span className='cabInfo blod'>Valor Referencial: 60.000 clp</span>
+                                <span className='cabInfo blod'>Valor Referencial: 70.000 clp</span>
                                 <span className="cabInfo blod">
                                     El Checkin para las cabañas debe ser despues de las 15:00 hrs.
                                 </span>
@@ -134,7 +135,7 @@ export const ModalsL = () => {
                                     />
                                     <TimePicker
                                         disabledTime={disabledDateTime}
-                                        onChange={(e) => console.log(e)}
+                                        onChange={(e)=> setCheckIn(e.$H + ":" + e.$m)}
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
@@ -146,7 +147,7 @@ export const ModalsL = () => {
                                         <label for="hijos" className="cantD">Tiene mascotas</label>
                                         <input type="checkbox" id="mascotas" name="mascotas" value="mascotas" onChange={(e) => setMascotas(e.target.value)} />
                                     </div>
-                                    <Button >Enviar</Button>
+                                    <Button onClick={sendEmail} >Enviar</Button>
                                 </div>
                             </div>
                         </div>
