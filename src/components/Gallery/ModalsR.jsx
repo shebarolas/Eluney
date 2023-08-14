@@ -20,7 +20,7 @@ import { Alert } from './Alert';
 const { RangePicker } = DatePicker;
 
 export const ModalsR = () => {
-
+    const toast = useToast()
     const [email, setEmail] = useState("");
     const [nombre, setNombre] = useState("");
     const [apellidos, setApellidos] = useState("");
@@ -49,9 +49,9 @@ export const ModalsR = () => {
             valor: valor,
             dias: dias
         }
-        const toast = useToast()
+        
 
-        await fetch(`https://eager-romantic-tarragon.glitch.me/massage/enviar`, {
+        await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
             method: "POST",
             body: JSON.stringify(dataSend),
             headers: {
@@ -61,16 +61,15 @@ export const ModalsR = () => {
         }).then((res) => {
             console.log(res);
             if (res.status > 199 && res.status < 300) {
-                alert("Se envio")
-                // toast({
-                //     position: 'top',
-                //     render: () => (
-                //         <AlertConf/>
-                //     ),
-                //   })
-                // setTimeout(() => {
-                //     window.location.href = "/";
-                // }, 2000);
+                toast({
+                    position: 'top',
+                    render: () => (
+                        <AlertConf/>
+                    ),
+                  })
+                setTimeout(() => {
+                    window.location.href = "/";
+                }, 2000);
             }
         }).catch((err) => {
             console.log(err);
@@ -162,6 +161,7 @@ export const ModalsR = () => {
                                         <label for="mascotas" className="cantD">Tiene mascotas</label>
                                         <input type="checkbox" id="mascotas" name="mascotas" value="mascotas" onChange={(e) => setMascotas(e.target.value)} />
                                     </div>
+                                    <Button onClick={sendEmail}>Enviar</Button>
                                     <Alert sendEmail={sendEmail}/>
                                 </div>
                             </div>

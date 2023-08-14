@@ -52,7 +52,7 @@ export const ModalsL = () => {
             dias: dias
         }
 
-        await fetch(`http://localhost:9000/massage/enviar`, {
+        await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
             method: "POST",
             body: JSON.stringify(dataSend),
             headers: {
