@@ -25,7 +25,6 @@ export const CardsR = () => {
                         </Text>
                     </Stack>
                 </CardBody>
-                <Divider />
                 <CardFooter>
                     <ButtonGroup spacing='2'>
                         <ModalsL/>

@@ -9,14 +9,18 @@ import {
     ModalCloseButton,
     Button,
     useDisclosure,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react';
 import '../../styles/modalsR.css'
 import { DatePicker, TimePicker } from 'antd';
 import { Acordings } from './Acordings';
 import moment from 'moment';
+import { Alert } from './Alert';
+import { AlertConf } from './AlertConf';
 const { RangePicker } = DatePicker;
 
 export const ModalsL = () => {
+    const [alert, setAlert] = useState(false);
     const [email, setEmail] = useState("");
     const [nombre, setNombre] = useState("");
     const [apellidos, setApellidos] = useState("");
@@ -29,6 +33,8 @@ export const ModalsL = () => {
     const [rut, setRut] = useState("");
     const [telefono, setTelefono] = useState("");
     const [checkIn, setCheckIn] = useState("");
+
+    const toast = useToast()
 
     const sendEmail = async () => {
         const dataSend = {
@@ -56,7 +62,16 @@ export const ModalsL = () => {
         }).then((res) => {
             console.log(res);
             if (res.status > 199 && res.status < 300) {
-                alert("Send Successfully !");
+                toast({
+                    position: 'top',
+                    render: () => (
+                        <AlertConf/>
+                    ),
+                  })
+                setTimeout(() => {
+                    window.location.href = "/";
+                }, 2000);
+                
             }
         }).catch((err) => {
             console.log(err);
@@ -84,15 +99,15 @@ export const ModalsL = () => {
     const range = (start, end) => {
         const result = [];
         for (let i = start; i < end; i++) {
-          result.push(i);
+            result.push(i);
         }
         return result;
-      };
+    };
 
     const disabledDateTime = () => ({
         disabledHours: () => range(0, 15),
-        disabledMinutes: () => range(30, 60),
-        disabledSeconds: () => [55, 56],
+        disabledMinutes: () => range(1, 60),
+        disabledSeconds: () => range(1, 60),
     });
 
     return (
@@ -108,8 +123,8 @@ export const ModalsL = () => {
                         <div className="globalMod">
                             <div className="cabaI">
                                 <span className="cabInfo">
-                                El Cafeteria y Cabañas Eluney - Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua. 
-                                Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
+                                    El Cafeteria y Cabañas Eluney - Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua.
+                                    Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 </span>
                                 <span className='cabInfo blod'>Valor Referencial: 70.000 clp</span>
                                 <span className="cabInfo blod">
@@ -129,13 +144,16 @@ export const ModalsL = () => {
                                     <input type="number" className='borderI' placeholder='Telefono' onChange={(e) => setTelefono(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
                                     <input type="number" className='borderI' placeholder='Cantidad de Personas' onChange={(e) => setPersonas(e.target.value)} />
+                                    <div className="fechaA">
+                                        <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
+                                        <DatePicker.RangePicker size={"small"}
+                                            onChange={handleDateChange}
+                                        />
+                                    </div>
 
-                                    <DatePicker.RangePicker size={"small"}
-                                        onChange={handleDateChange}
-                                    />
                                     <TimePicker
                                         disabledTime={disabledDateTime}
-                                        onChange={(e)=> setCheckIn(e.$H + ":" + e.$m)}
+                                        onChange={(e) => setCheckIn(e.$H + ":" + "00")}
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
@@ -147,7 +165,7 @@ export const ModalsL = () => {
                                         <label for="hijos" className="cantD">Tiene mascotas</label>
                                         <input type="checkbox" id="mascotas" name="mascotas" value="mascotas" onChange={(e) => setMascotas(e.target.value)} />
                                     </div>
-                                    <Button onClick={sendEmail} >Enviar</Button>
+                                    <Alert sendEmail={sendEmail}/>
                                 </div>
                             </div>
                         </div>

@@ -7,6 +7,7 @@ import { Galeria } from './Galeria'
 import { Nosotros } from './Nosotros'
 import { ServicioCaf } from '../components/ServicioCaf'
 import { Turismo } from '../components/Turismo'
+import { AlertConf } from '../components/Gallery/AlertConf'
 
 export const Home = () => {
   return (

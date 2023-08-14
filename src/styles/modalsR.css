@@ -10,7 +10,7 @@
 }
 .alls{
     display: grid;
-    grid-template-rows: repeat(8, 2rem);
+    grid-template-rows: repeat(8, 2.5rem);
     place-items: center;
     width: min-content;
     gap: .7rem;
@@ -32,7 +32,7 @@
 }
 .cabaI{
     display: grid;
-    grid-template-rows: 8rem 2rem 2rem 4rem ;
+    grid-template-rows: 8rem 2rem 3rem 3rem ;
 }
 .cabInfo{
     font-size: .9rem;

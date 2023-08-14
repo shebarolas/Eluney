@@ -14,6 +14,8 @@ import '../../styles/modalsR.css'
 import { DatePicker, TimePicker } from 'antd';
 import { Acordings } from './Acordings';
 import moment from 'moment';
+import { AlertConf } from './AlertConf';
+import { Alert } from './Alert';
 const { RangePicker } = DatePicker;
 
 export const ModalsR = () => {
@@ -57,7 +59,15 @@ export const ModalsR = () => {
         }).then((res) => {
             console.log(res);
             if (res.status > 199 && res.status < 300) {
-                alert("Send Successfully !");
+                toast({
+                    position: 'top',
+                    render: () => (
+                        <AlertConftConf/>
+                    ),
+                  })
+                setTimeout(() => {
+                    window.location.href = "/";
+                }, 2000);
             }
         }).catch((err) => {
             console.log(err);
@@ -92,8 +102,8 @@ export const ModalsR = () => {
 
     const disabledDateTime = () => ({
         disabledHours: () => range(0, 15),
-        disabledMinutes: () => range(30, 60),
-        disabledSeconds: () => [55, 56],
+        disabledMinutes: () => range(1, 60),
+        disabledSeconds: () => range(1, 60)
     });
 
     return (
@@ -137,7 +147,7 @@ export const ModalsR = () => {
                                     />
                                     <TimePicker
                                         disabledTime={disabledDateTime}
-                                        onChange={(e)=> setCheckIn(e.$H + ":" + e.$m)}
+                                        onChange={(e)=> setCheckIn(e.$H + ":" + "00")}
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
@@ -149,7 +159,7 @@ export const ModalsR = () => {
                                         <label for="mascotas" className="cantD">Tiene mascotas</label>
                                         <input type="checkbox" id="mascotas" name="mascotas" value="mascotas" onChange={(e) => setMascotas(e.target.value)} />
                                     </div>
-                                    <Button onClick={sendEmail}>Enviar</Button>
+                                    <Alert sendEmail={sendEmail}/>
                                 </div>
                             </div>
                         </div>

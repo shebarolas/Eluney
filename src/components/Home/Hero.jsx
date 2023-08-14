@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <>
             <Sliders />
-            <div className="info">
+            <div id="home" className="info">
                 <div className="global">
                     <div className="textoL">
                         <motion.img className='logoss'
