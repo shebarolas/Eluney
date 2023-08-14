@@ -161,7 +161,7 @@ export const ModalsR = () => {
                                         <label for="mascotas" className="cantD">Tiene mascotas</label>
                                         <input type="checkbox" id="mascotas" name="mascotas" value="mascotas" onChange={(e) => setMascotas(e.target.value)} />
                                     </div>
-                                    <Button onClick={sendEmail}>Enviar</Button>
+                                   
                                     <Alert sendEmail={sendEmail}/>
                                 </div>
                             </div>
