@@ -9,6 +9,7 @@ import {
     ModalCloseButton,
     Button,
     useDisclosure,
+    useToast,
 } from '@chakra-ui/react'
 import '../../styles/modalsR.css'
 import { DatePicker, TimePicker } from 'antd';
@@ -48,6 +49,7 @@ export const ModalsR = () => {
             valor: valor,
             dias: dias
         }
+        const toast = useToast()
 
         await fetch(`https://eager-romantic-tarragon.glitch.me/massage/enviar`, {
             method: "POST",
@@ -62,7 +64,7 @@ export const ModalsR = () => {
                 toast({
                     position: 'top',
                     render: () => (
-                        <AlertConftConf/>
+                        <AlertConf/>
                     ),
                   })
                 setTimeout(() => {
