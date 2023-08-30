@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/navbar.css';
 import logo from '../imgs/logoE.jpg'
+import { MenuRes } from './MenuRes';
 // import { Select } from '@chakra-ui/react'
 // import { Link } from 'react-scroll';
 
@@ -10,6 +11,7 @@ export const NavBar = () => {
         <div className="navbar">
             <div className="content">
                 <div className="nav">
+                    <MenuRes/>
                     <div className="optionsL ">
                         <a href=""><span className='border'>Inicio</span></a>
                         <a href="#cafeteria"><span className='border'>Cafeteria</span></a>

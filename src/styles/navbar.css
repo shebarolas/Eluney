@@ -7,7 +7,6 @@
     position: fixed;
     z-index: 1;
     display: grid;
-    grid-template-rows: 4rem 1fr;
     height: 5rem;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.689);
@@ -51,6 +50,7 @@
     background-color: rgb(86, 86, 249)
 
 }
+
 .imgs{
     height: 2.5rem;
     width: 2.5rem;
@@ -68,4 +68,21 @@ body{
 
 option{
     background: none !important;
+}
+.css-18ikiee{
+    display: none !important;
+}
+@media (max-width: 428px){
+   .optionsL, .optionsR{
+    display: none !important;
+   }
+   .css-18ikiee{
+    display: grid !important;
+    background-color: white !important;
+   }
+   .nav{
+    grid-template-columns: 5rem 1fr 5rem;
+   }
+  
+
 }
