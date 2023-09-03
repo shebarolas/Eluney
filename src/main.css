@@ -60,6 +60,17 @@ html{
     .disp{
         display: none !important;
     }
+    .ant-picker-dropdown{
+        left: 9.5rem !important;
+        top: 3100px !important;
+        --arrow-x: 0 !important;
+        --arrow-y: 0 !important;
+    }
+    .ant-picker-panels {
+        display: grid !important;
+        flex-wrap: nowrap !important;
+        direction: ltr !important;
+    }
 }
 @media (min-width: 768px){
     .cabaR{
