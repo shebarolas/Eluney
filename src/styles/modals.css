@@ -24,6 +24,11 @@
     grid-template-rows: 5rem 1fr 5rem;
     width: 60rem !important;
 }
+@media (max-width: 428px){
+    .modalCont{
+        width: 100rem !important;
+    }
+}
 .imgC{
     display: grid;
     grid-template-rows: 1fr 1fr;

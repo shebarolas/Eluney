@@ -8,3 +8,8 @@
     width: 30rem;
     object-fit: cover;  
 }
+@media (max-width: 748px){
+    .sliders{
+        width: 20rem; 
+    }
+}

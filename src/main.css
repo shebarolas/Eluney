@@ -7,6 +7,14 @@
     place-items: center !important;
     width: 100% !important;
 }
+@media (max-width: 748px) {
+    .css-1u2cvaz{
+        display: flex !important;
+        grid-template-columns: 1fr;
+        place-items: center !important;
+        width: 100% !important;
+    }
+}
 .css-pv22qu{
     max-width: none !important;
     width: 55rem !important;

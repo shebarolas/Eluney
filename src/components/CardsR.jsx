@@ -6,8 +6,8 @@ import { Modals } from './Gallery/Modals'
 import { ModalsL } from './Gallery/ModalsL'
 
 export const CardsR = () => {
-  return (
-    <>
+    return (
+        <>
             <Card maxW='sm'>
                 <CardBody>
                     <Image
@@ -19,19 +19,21 @@ export const CardsR = () => {
                     <Stack mt='6' spacing='3'>
                         <Heading size='md'>Cabaña Laurel</Heading>
                         <Text>
-                        Bienvenidos a nuestras acogedoras cabañas diseñadas especialmente para brindar comodidad y disfrute a grupos de hasta 5 personas. 
-                        Ubicadas en un entorno natural privilegiado, 
-                        nuestras cabañas ofrecen un refugio perfecto para escapar del ajetreo de la vida cotidiana y sumergirse en un ambiente tranquilo y sereno
+                            Bienvenidos a nuestras acogedoras cabañas diseñadas especialmente para brindar comodidad y disfrute a grupos de hasta 5 personas.
+                            Ubicadas en un entorno natural privilegiado,
+                            nuestras cabañas ofrecen un refugio perfecto para escapar del ajetreo de la vida cotidiana y sumergirse en un ambiente tranquilo y sereno
                         </Text>
                     </Stack>
                 </CardBody>
                 <CardFooter>
                     <ButtonGroup spacing='2'>
-                        <ModalsL/>
-                        <Modals/>
+                        <div className="btnGrid">
+                            <ModalsL />
+                            <Modals />
+                        </div>
                     </ButtonGroup>
                 </CardFooter>
             </Card>
         </>
-  )
+    )
 }

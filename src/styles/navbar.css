@@ -83,6 +83,8 @@ option{
    .nav{
     grid-template-columns: 5rem 1fr 5rem;
    }
-  
+   body {
+    overflow-x: hidden;
+   }
 
 }
