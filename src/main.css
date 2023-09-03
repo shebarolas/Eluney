@@ -62,9 +62,8 @@ html{
     }
     .ant-picker-dropdown{
         left: 9.5rem !important;
-        top: 3100px !important;
-        --arrow-x: 0 !important;
-        --arrow-y: 0 !important;
+        top: 3700px !important;
+    
     }
     .ant-picker-panels {
         display: grid !important;
