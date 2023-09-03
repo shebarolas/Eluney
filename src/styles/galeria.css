@@ -3,12 +3,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
-@media (max-width: 428px){
-    .cards{
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: none;
-    }
-}
+
 .todo{
     padding-top: 1rem;
     padding-bottom: 1rem;

@@ -7,14 +7,6 @@
     place-items: center !important;
     width: 100% !important;
 }
-@media (max-width: 748px) {
-    .css-1u2cvaz{
-        display: flex !important;
-        grid-template-columns: 1fr;
-        place-items: center !important;
-        width: 100% !important;
-    }
-}
 .css-pv22qu{
     max-width: none !important;
     width: 55rem !important;
@@ -25,4 +17,44 @@
 }
 html{
     scroll-behavior: smooth;
+}
+@media (max-width: 748px) {
+    .css-1u2cvaz{
+        display: flex !important;
+        grid-template-columns: 1fr;
+        place-items: center !important;
+        width: 100% !important;
+    }
+    .globalMod{
+        grid-template-columns: 1fr;
+    }
+    .cabaI{
+        display: none;
+    }
+    .css-pv22qu{
+        width: 100% !important;
+        max-width: 27rem !important;
+    }
+}
+@media (max-width: 748px){
+    .optionsL, .optionsR{
+     display: none !important;
+    }
+    .css-18ikiee{
+     display: grid !important;
+     background-color: white !important;
+    }
+    .nav{
+     grid-template-columns: 5rem 1fr 5rem;
+    }
+    body {
+     overflow-x: hidden;
+    }
+ 
+ }
+ @media (max-width: 748px){
+    .cards{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
 }

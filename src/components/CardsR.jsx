@@ -4,6 +4,7 @@ import '../styles/cards.css'
 import caba2 from "../imgs/Cabañas.jpg"
 import { Modals } from './Gallery/Modals'
 import { ModalsL } from './Gallery/ModalsL'
+import { Acordings } from './Gallery/Acordings'
 
 export const CardsR = () => {
     return (
@@ -19,18 +20,31 @@ export const CardsR = () => {
                     <Stack mt='6' spacing='3'>
                         <Heading size='md'>Cabaña Laurel</Heading>
                         <Text>
-                            Bienvenidos a nuestras acogedoras cabañas diseñadas especialmente para brindar comodidad y disfrute a grupos de hasta 5 personas.
-                            Ubicadas en un entorno natural privilegiado,
-                            nuestras cabañas ofrecen un refugio perfecto para escapar del ajetreo de la vida cotidiana y sumergirse en un ambiente tranquilo y sereno
+                        <div className="cabaR">
+                                <span className="cabInfo">
+                                    El Cafeteria y Cabañas Eluney - Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua.
+                                    Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
+                                </span>
+                                <br />
+                                <span className='cabInfo blod'>Valor Referencial: 70.000 clp</span>
+                                <br />
+                                <span className="cabInfo blod">
+                                    El Checkin para las cabañas debe ser despues de las 15:00 hrs.
+                                </span>
+                                <br />
+                                <span className="cabInfo">
+                                    Todas las mañanas se sirve un desayuno a la carta.
+                                </span>
+                                <Acordings />
+                            </div>
                         </Text>
+                    
                     </Stack>
                 </CardBody>
                 <CardFooter>
                     <ButtonGroup spacing='2'>
-                        <div className="btnGrid">
-                            <ModalsL />
-                            <Modals />
-                        </div>
+                        <ModalsL />
+                        <Modals />
                     </ButtonGroup>
                 </CardFooter>
             </Card>
