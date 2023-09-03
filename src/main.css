@@ -57,4 +57,12 @@ html{
         grid-template-rows: 1fr 1fr;
         grid-template-columns: none;
     }
+    .disp{
+        display: none !important;
+    }
+}
+@media (min-width: 768px){
+    .cabaR{
+        display: none;
+    }
 }
