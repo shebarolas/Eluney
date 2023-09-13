@@ -157,7 +157,7 @@ export const ModalsL = () => {
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
-                                        <br />
+                                        <br/>
                                         <span className='cantD'>Valor: {valor}</span>
 
                                     </div>

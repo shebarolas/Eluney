@@ -15,14 +15,13 @@ export const Home = () => {
       <Hero />
       <div className="homes">
         <div className="home">
-          {/* <h1 className='textH'>Cafeteria y Cabañas Eluney</h1> */}
+          <h1 className='textH'>Cafeteria y Cabañas Eluney</h1>
           <div className="infoHome">
-            {/* <span>
-              Las cabañas son acogedoras y espaciosas, diseñadas para brindar una experiencia confortable y relajante para toda la familia.
-              Construidas en medio de un hermoso entorno natural, ofrecen vistas panorámicas de exuberantes bosques, montañas o un pintoresco lago,
-              según su ubicación. Cada cabaña cuenta con una arquitectura rústica pero moderna,
-              utilizando materiales naturales como la madera y la piedra para crear un ambiente cálido y acogedor.
-            </span> */}
+            <span>
+             Eluney o "regalo del cielo" es un proyecto familiar que comenzó por las propiedades medioambientales que ofrecen los terrenos de Palguin Alto,
+             pero se transformó con el tiempo en una pasión por la tranquilidad y naturaleza del entorno que nos rodea, dicho esto hemos logrado como pyme familiar combinar
+             la maravilla del medio ambiente con la comodidad citadina, dicho esto a disfrutar el "regalo del cielo".
+            </span>
           </div>
         </div>
       </div>

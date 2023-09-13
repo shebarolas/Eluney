@@ -60,19 +60,31 @@ html{
     .disp{
         display: none !important;
     }
-    .ant-picker-dropdown{
+    /* .ant-picker-dropdown{
         left: 9.5rem !important;
         top: 3700px !important;
     
-    }
+    } */
     .ant-picker-panels {
         display: grid !important;
         flex-wrap: nowrap !important;
         direction: ltr !important;
+    }
+    .imgText{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+    .sliderCafe{
+        height: 22rem !important;
+        position: initial;
+    }
+    .imagesCafe{
+        height:20rem;
     }
 }
 @media (min-width: 768px){
     .cabaR{
         display: none;
     }
+   
 }

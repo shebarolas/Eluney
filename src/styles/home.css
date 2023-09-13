@@ -31,7 +31,7 @@
 .home{
     display: grid;
     place-items: center;    
-    width: 40rem;
+    width: 100%;
     gap: 1rem;
 }
 .homes{
