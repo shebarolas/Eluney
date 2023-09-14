@@ -143,6 +143,8 @@ export const ModalsR = () => {
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}
                                             onChange={handleDateChange}
+                                            autocorrect="off" 
+                                            autocapitalize="off"
                                         />
                                     </div>
                                     <input type="email" className='borderI' placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
