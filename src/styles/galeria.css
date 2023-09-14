@@ -11,6 +11,6 @@
     height: auto;
     width: 100%;
     place-items: center;
-    background-color: gray;
     gap: 2rem;
+    border-bottom: 1px solid #ccc;
 }

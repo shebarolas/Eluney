@@ -12,7 +12,7 @@ export const ServicioCaf = () => {
         <div id="cafeteria" className="cafeteria">
             <h1 className='textS'>Cafeteria</h1>
             <div className="imgText">
-                {/* <div className="imgCafe">
+                <div className="imgCafe">
                     <div className="grid1">
                         <img className='imgsCafe' src={cafe1} alt="comida1" />
                         <img className='imgsCafe' src={cafe2} alt="comida2" />
@@ -22,7 +22,7 @@ export const ServicioCaf = () => {
                         <img className='imgsCafe' src={cafe4} alt="cafeteria1" />
                         <img className='imgsCafe' src={cafe5} alt="cafeteria2" />
                     </div>
-                </div> */}
+                </div>
                 <SliderCafe/>
                 <span className="textCafe">
                     ¡Bienvenido a nuestra acogedora cafetería! Aquí encontrarás el lugar perfecto para relajarte y disfrutar de una deliciosa taza de café.

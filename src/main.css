@@ -80,6 +80,12 @@ html{
     .imagesCafe{
         height:20rem;
     }
+    .imgCafe{
+        display:none !important;
+    }
+    .sliderCafe{
+        display: grid !important;
+    }
 }
 @media (min-width: 768px){
     .cabaR{

@@ -4,9 +4,8 @@
     place-items: center;
     padding: 2rem;
     gap: 2rem;
-    margin-top: 2rem;
-    background-color: gray;
-}
+    border-bottom: 1px solid #ccc;
+ }
 .imgsCafe{
     height: 11rem;
     width: 11rem;
@@ -36,4 +35,7 @@
 .textCafe{
     font-size: 1.5rem;
     text-align: center;
+}
+.sliderCafe{
+    display: none !important;
 }
