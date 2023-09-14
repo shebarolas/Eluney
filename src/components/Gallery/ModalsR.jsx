@@ -139,14 +139,17 @@ export const ModalsR = () => {
                                     <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Apellido' onChange={(e) => setApellidos(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Rut' onChange={(e) => setRut(e.target.value)} />
+                                    <div className="fechaA">
+                                        <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
+                                        <DatePicker.RangePicker size={"small"}
+                                            onChange={handleDateChange}
+                                        />
+                                    </div>
                                     <input type="email" className='borderI' placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
                                     <input type="number" className='borderI' placeholder='Telefono' onChange={(e) => setTelefono(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
                                     <input type="number" className='borderI' placeholder='Cantidad de Personas' onChange={(e) => setPersonas(e.target.value)} />
 
-                                    <DatePicker.RangePicker size={"small"}
-                                        onChange={handleDateChange}
-                                    />
                                     <TimePicker
                                         disabledTime={disabledDateTime}
                                         onChange={(e)=> setCheckIn(e.$H + ":" + "00")}
