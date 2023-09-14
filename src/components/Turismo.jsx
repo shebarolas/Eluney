@@ -13,18 +13,15 @@ export const Turismo = () => {
             <div className="saltoA">
                 <div className="imgSal">
                     <img className="salImg" src={salto1} alt="salto1" />
-                    <img className='salImg' src={salto2} alt="salto2" />
                 </div>
             </div>
             <div className="saltoA">
                 <div className="imgSal">
                     <img className="salImg" src={terma} alt="salto1" />
-                    <img className="salImg" src={congelado} alt="salto1" />
                 </div>
             </div>
             <div className="saltoA">
                 <div className="imgSal">
-                    <img className="salImg" src={pucon1} alt="salto1" />
                     <img className='salImg' src={pucon2} alt="salto2" />
                 </div>
             </div>
