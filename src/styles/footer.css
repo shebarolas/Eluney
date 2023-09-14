@@ -1,6 +1,6 @@
 .footer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 5rem;
     padding: 1rem;
     place-items: center;
     position: relative;
@@ -9,7 +9,6 @@
 }
 .logos{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     cursor: pointer;
     gap: 2rem;
 }

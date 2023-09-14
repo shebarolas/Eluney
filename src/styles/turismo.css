@@ -9,7 +9,7 @@
     padding: 2rem;
     place-items: center;
     gap: 2rem;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;  
 }
 .saltoA{
     display: grid;

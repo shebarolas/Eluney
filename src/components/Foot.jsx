@@ -13,8 +13,6 @@ export const Foot = () => {
         </div>
         <div className="logos">
                 <a href="https://www.facebook.com/profile.php?id=100093055598485"><FaFacebook size={30} /></a>
-                <FaTwitter size={30} />
-                <FaInstagram size={30} />
         </div>
     </div>
   )
