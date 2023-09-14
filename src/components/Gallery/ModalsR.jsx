@@ -12,7 +12,7 @@ import {
     useToast,
 } from '@chakra-ui/react'
 import '../../styles/modalsR.css'
-import { DatePicker, TimePicker } from 'antd';
+import { DatePicker, TimePicker, Checkbox } from 'antd';
 import { Acordings } from './Acordings';
 import moment from 'moment';
 import { AlertConf } from './AlertConf';
@@ -28,7 +28,7 @@ export const ModalsR = () => {
     const [personas, setPersonas] = useState("");
     const [fecha, setFecha] = useState("");
     const [dias, setDias] = useState("");
-    const [mascotas, setMascotas] = useState("");
+    const [mascotas, setMascotas] = useState(false);
     const [valor, setValor] = useState("");
     const [rut, setRut] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -143,8 +143,7 @@ export const ModalsR = () => {
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}
                                             onChange={handleDateChange}
-                                            autocorrect="off" 
-                                            autocapitalize="off"
+                                            placeholder={["Fecha Incio","Fecha Final"]}
                                         />
                                     </div>
                                     <input type="email" className='borderI' placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
@@ -155,6 +154,7 @@ export const ModalsR = () => {
                                     <TimePicker
                                         disabledTime={disabledDateTime}
                                         onChange={(e)=> setCheckIn(e.$H + ":" + "00")}
+                                        placeholder='Horario CheckIn'
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
@@ -163,8 +163,8 @@ export const ModalsR = () => {
 
                                     </div>
                                     <div className="children">
-                                        <label for="mascotas" className="cantD">Tiene mascotas</label>
-                                        <input type="checkbox" id="mascotas" name="mascotas" value="mascotas" onChange={(e) => setMascotas(e.target.value)} />
+                                        <label for="mascotas" className="cantD">Viene con mascotas?</label>
+                                        <Checkbox onChange={(e) => setMascotas(e.target.checked)}/>
                                     </div>
                                    
                                     <Alert sendEmail={sendEmail}/>
