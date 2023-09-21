@@ -18,6 +18,18 @@
 html{
     scroll-behavior: smooth;
 }
+.sliderss{
+    width: 30rem !important;
+    height: 25rem;
+    object-fit: contain !important;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
+    border-radius: .2rem !important;
+}
+.imagess{
+    width: 100% !important;
+    height: 25rem !important;
+    object-fit: cover !important;
+}
 @media (max-width: 748px) {
     .css-1u2cvaz{
         display: flex !important;
@@ -86,10 +98,28 @@ html{
     .sliderCafe{
         display: grid !important;
     }
+    .sliderss{
+        width: 15rem !important;
+        height: 21rem;
+    }
+    .imagess{
+        width: 100% !important;
+        height: 21rem !important;
+    }
+    .salImg{
+        width: 15rem !important;
+        height: 21rem;
+    }
+    .textCafe{
+        text-align: left;
+    }
 }
+
+
 @media (min-width: 768px){
     .cabaR{
         display: none;
     }
+
    
 }

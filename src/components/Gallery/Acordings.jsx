@@ -31,6 +31,14 @@ export const Acordings = () => {
                         <span>Balcon y Terraza</span>
                         <br />
                         <span>Cocina</span>
+                        <br />
+                        <span>Caminatas</span>
+                        <br />
+                        <span>Rafting</span>
+                        <br />
+                        <span>Canopy</span>
+                        <br />
+                        <span>Tinajas</span>
                     </AccordionPanel>
                 </AccordionItem>
                 <AccordionItem>

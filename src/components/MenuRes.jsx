@@ -4,12 +4,11 @@ import {
     MenuButton,
     MenuList,
     MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
-    IconButton,
-} from '@chakra-ui/react'
+    IconButton
+} from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons'
+
+
 
 export const MenuRes = () => {
     return (
@@ -18,6 +17,7 @@ export const MenuRes = () => {
                 as={IconButton}
                 aria-label='Options'
                 variant='outline'
+                icon={<HamburgerIcon/>}
             />
             <MenuList>
                 <MenuItem as="a" href="#" command='⌘T'>
