@@ -4,10 +4,12 @@ import cafe2 from '../imgs/Cafeteria02.jpg';
 import cafe3 from '../imgs/Cafeteria03.jpg';
 import cafe4 from '../imgs/Cafeteria04.jpg';
 import cafe5 from '../imgs/Cafeteria05.jpg';
+import cafe6 from '../imgs/Cafeteria06.jpg';
 import '../styles/cafeteria.css';
 import { SliderCafe } from './SliderCafe';
 
-export const ServicioCaf = () => {
+export const 
+ServicioCaf = () => {
     return (
         <div id="cafeteria" className="cafeteria">
             <h1 className='textS'>Cafeteria</h1>
@@ -21,6 +23,7 @@ export const ServicioCaf = () => {
                     <div className="grid2">
                         <img className='imgsCafe' src={cafe4} alt="cafeteria1" />
                         <img className='imgsCafe' src={cafe5} alt="cafeteria2" />
+                        <img className='imgsCafe' src={cafe6} alt="cafeteria3" />
                     </div>
                 </div>
                 <SliderCafe/>

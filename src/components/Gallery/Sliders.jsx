@@ -10,6 +10,11 @@ import caba10 from "../../imgs/caba10.jpg";
 import caba11 from "../../imgs/caba11.jpg";
 import caba12 from "../../imgs/caba12.jpg";
 import caba13 from "../../imgs/caba13.jpg";
+import caba14 from "../../imgs/caba14.jpg";
+import caba15 from "../../imgs/caba15.jpg";
+import caba16 from "../../imgs/caba16.jpg";
+import caba17 from "../../imgs/caba17.jpg";
+import caba18 from "../../imgs/caba18.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -57,6 +62,21 @@ export const Sliders = () => {
         </div>
         <div className="imagesS">
             <img src={caba13} alt="Slide 3" />
+        </div>
+        <div className="imagesS">
+            <img src={caba14} alt="Slide 3" />
+        </div>
+        <div className="imagesS">
+            <img src={caba15} alt="Slide 3" />
+        </div>
+        <div className="imagesS">
+            <img src={caba16} alt="Slide 3" />
+        </div>
+        <div className="imagesS">
+            <img src={caba17} alt="Slide 3" />
+        </div>
+        <div className="imagesS">
+            <img src={caba18} alt="Slide 3" />
         </div>
     </Slider>
   )

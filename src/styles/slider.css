@@ -15,11 +15,12 @@ img {
     right: 0;
 }
 .slick-prev:before, .slick-next:before{
-    font-size: 0 !important;
+    font-size: 1.5rem !important;
+    color: black !important;
 }
 .slick-prev {
-    left: 0 !important;
+    left: -2rem !important;
 }
 .slick-next {
-    right: 0 !important;
+    right: -2rem !important;
 }

@@ -5,6 +5,7 @@ import cafe2 from '../imgs/Cafeteria02.jpg';
 import cafe3 from '../imgs/Cafeteria03.jpg';
 import cafe4 from '../imgs/Cafeteria04.jpg';
 import cafe5 from '../imgs/Cafeteria05.jpg';
+import cafe6 from '../imgs/Cafeteria06.jpg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/slidersF.css'
@@ -26,14 +27,18 @@ export const SliderCafe = () => {
             <img src={cafe2} alt="" />
         </div>
         <div className="imagesS imagesCafe">
-        <img src={cafe3} alt="" />
+            <img src={cafe3} alt="" />
         </div>
         <div className="imagesS imagesCafe">
-        <img src={cafe4} alt="" />
+            <img src={cafe4} alt="" />
         </div>
         <div className="imagesS imagesCafe">
-        <img src={cafe5} alt="" />
+            <img src={cafe5} alt="" />
         </div>
+        <div className="imagesS imagesCafe">
+            <img src={cafe6} alt="" />
+        </div>
+      
       
     </Slider>
   )

@@ -24,7 +24,6 @@ export default function Hero() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 3 }}
                         >
-                            "El regalo del cielo"
                         </motion.span>
                     </div>
                 </div>

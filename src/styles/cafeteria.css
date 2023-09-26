@@ -5,10 +5,11 @@
     padding: 2rem;
     gap: 2rem;
     border-bottom: 1px solid #ccc;
+    color: #206dc7;
  }
 .imgsCafe{
-    height: 11rem;
-    width: 11rem;
+    height: 13rem;
+    width: 13rem;
     border-radius: .2rem;
 }
 .imgText{
@@ -29,7 +30,7 @@
 }
 .grid2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 .textCafe{
