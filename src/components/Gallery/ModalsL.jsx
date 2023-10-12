@@ -19,6 +19,7 @@ import { Alert } from './Alert';
 import { AlertConf } from './AlertConf';
 const { RangePicker } = DatePicker;
 import validator from 'validator'
+import { AlerRej } from './AlerRej';
 
 export const ModalsL = () => {
     const [alert, setAlert] = useState(false);
@@ -85,9 +86,17 @@ export const ModalsL = () => {
                     window.location.href = "/";
                 }, 2000);
                 
+            }else{
+                toast({
+                    position: 'top',
+                    render: () => (
+                        <AlerRej/>
+                    )
+                  })
             }
         }).catch((err) => {
             console.log(err);
+            
         });
     }
 
@@ -150,7 +159,7 @@ export const ModalsL = () => {
                             </div>
                             <div className="tods">
                                 <div className="alls">
-                                    <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} />
+                                    <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} required />
                                     <input type="text" className='borderI' placeholder='Apellido' onChange={(e) => setApellidos(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Rut' onChange={(e) => setRut(e.target.value)} />
                                     <div className="fechaA">

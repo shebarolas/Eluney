@@ -19,6 +19,7 @@ import { AlertConf } from './AlertConf';
 import { Alert } from './Alert';
 const { RangePicker } = DatePicker;
 import validator from 'validator'
+import { AlerRej } from './AlerRej';
 
 export const ModalsR = () => {
     const toast = useToast()
@@ -85,6 +86,13 @@ export const ModalsR = () => {
                 setTimeout(() => {
                     window.location.href = "/";
                 }, 2000);
+            }else{
+                toast({
+                    position: 'top',
+                    render: () => (
+                        <AlerRej/>
+                    )
+                  })
             }
         }).catch((err) => {
             console.log(err);
