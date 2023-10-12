@@ -145,7 +145,7 @@ export const ModalsL = () => {
                         <div className="globalMod blue">
                             <div className="cabaI">
                                 <span className="cabInfo">
-                                    El Cafeteria y Cabañas Eluney - Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua.
+                                    Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua.
                                     Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 </span>
                                 <span className='cabInfo blod'>Valor Referencial: 70.000 clp</span>

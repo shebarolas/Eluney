@@ -31,7 +31,7 @@ export const Sliders = () => {
       };
 
   return (
-    <Slider {...settings} className="slider">
+    <Slider {...settings} className="slidersa">
         <div className="images">
             <img src={caba1} alt="Slide 1" />
         </div>

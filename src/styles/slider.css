@@ -8,12 +8,14 @@ img {
     height: 100%;
     object-fit: cover;
 }
-.slider{
+.slidersa{
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
+    
 }
+
 .slick-prev:before, .slick-next:before{
     font-size: 1.5rem !important;
     color: black !important;
@@ -24,3 +26,8 @@ img {
 .slick-next {
     right: -2rem !important;
 }
+
+.slidersa button{
+    display: none !important;
+     
+ }
