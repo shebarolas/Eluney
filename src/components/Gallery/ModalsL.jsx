@@ -18,6 +18,7 @@ import moment from 'moment';
 import { Alert } from './Alert';
 import { AlertConf } from './AlertConf';
 const { RangePicker } = DatePicker;
+import validator from 'validator'
 
 export const ModalsL = () => {
     const [alert, setAlert] = useState(false);
@@ -35,6 +36,18 @@ export const ModalsL = () => {
     const [checkIn, setCheckIn] = useState("");
 
     const toast = useToast()
+
+    const [emailError, setEmailError] = useState('')
+    const validateEmail = (e) => {
+        var email = e.target.value
+
+        if (validator.isEmail(email)) {
+            setEmailError('Email Valido')
+            setEmail(email);
+        } else {
+            setEmailError('Email Invalido, revise que este correcto')
+        }
+    }
 
     const sendEmail = async () => {
         const dataSend = {
@@ -117,10 +130,10 @@ export const ModalsL = () => {
             <Modal isOpen={isOpen} onClose={onClose} className="modalss">
                 <ModalOverlay />
                 <ModalContent className='modalCont'>
-                    <ModalHeader>Formulario Reserva</ModalHeader>
+                    <ModalHeader className='blue'>Formulario Reserva</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <div className="globalMod">
+                        <div className="globalMod blue">
                             <div className="cabaI">
                                 <span className="cabInfo">
                                     El Cafeteria y Cabañas Eluney - Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua.
@@ -147,7 +160,11 @@ export const ModalsL = () => {
                                             placeholder={["Fecha Incio","Fecha Final"]}
                                         />
                                     </div>
-                                    <input type="email" className='borderI' placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
+                                    <input type="email" className='borderI' placeholder='Email' onChange={(e) => validateEmail(e)} />
+                                    <span style={{
+                                        fontWeight: 'bold',
+                                        color: 'white',
+                                    }}>{emailError}</span>
                                     <input type="number" className='borderI' placeholder='Telefono' onChange={(e) => setTelefono(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
                                     <input type="number" className='borderI' placeholder='Cantidad de Personas' onChange={(e) => setPersonas(e.target.value)} />

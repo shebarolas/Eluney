@@ -12,10 +12,13 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.6.1",
+    "@cristiansantana/chile-rut": "^1.0.7",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
     "antd": "^5.6.1",
+    "chilean-rutify": "^2.1.0",
     "framer-motion": "^10.12.8",
+    "geojson": "^0.5.0",
     "mapbox-gl": "^2.15.0",
     "moment": "^2.29.4",
     "nodemailer": "^6.9.2",
@@ -26,7 +29,9 @@
     "react-router-dom": "^6.11.1",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "validar-rut": "^3.1.0",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

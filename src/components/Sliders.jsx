@@ -22,11 +22,11 @@ export const Sliders = () => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 7000,
+        speed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 7000,
+        autoplaySpeed: 4000,
 
       };
 

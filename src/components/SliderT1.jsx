@@ -10,7 +10,6 @@ export const SliderT1 = () => {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 7000,
         slidesToShow: 1,
         slidesToScroll: 1,
         // autoplay: true,

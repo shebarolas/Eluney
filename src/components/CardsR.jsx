@@ -17,7 +17,7 @@ export const CardsR = () => {
                         borderRadius='lg'
                         className='imgsC'
                     />
-                    <Stack mt='6' spacing='3'>
+                    <Stack mt='6' spacing='3' className='blue'>
                         <Heading size='md'>Cabaña Laurel</Heading>
                         <Text>
                             <div className="disp">

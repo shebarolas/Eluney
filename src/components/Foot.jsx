@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
-import logo from '../imgs/logo.jpg';
+import logo from '../imgs/logoE.jpg';
 import '../styles/footer.css';
 
 export const Foot = () => {
@@ -8,8 +8,8 @@ export const Foot = () => {
     <div className='footer'>
          <div className="informacions">
                 <img src={logo} alt="" className='fotLogo' />
-                <span>@ Direccion Cafeteria y Cabañas Eluney</span>
-                <span>@ Telefono: +5691234567</span>
+                <span><a href="mailto:eluneylodge@gmail.com">@eluneylodge@gmail.com</a></span>
+                <span>@ Telefono: +56995416124</span>
         </div>
         <div className="logos">
                 <a href="https://www.facebook.com/profile.php?id=100093055598485"><FaFacebook size={30} /></a>

@@ -18,6 +18,7 @@ import moment from 'moment';
 import { AlertConf } from './AlertConf';
 import { Alert } from './Alert';
 const { RangePicker } = DatePicker;
+import validator from 'validator'
 
 export const ModalsR = () => {
     const toast = useToast()
@@ -34,6 +35,18 @@ export const ModalsR = () => {
     const [telefono, setTelefono] = useState("");
     const [checkIn, setCheckIn] = useState("");
 
+    const [emailError, setEmailError] = useState('')
+    const validateEmail = (e) => {
+        var email = e.target.value
+
+        if (validator.isEmail(email)) {
+            setEmailError('Email Valido')
+            setEmail(email);
+        } else {
+            setEmailError('Email Invalido, revise que este correcto')
+        }
+    }
+
     const sendEmail = async () => {
         const dataSend = {
             email: email,
@@ -49,7 +62,9 @@ export const ModalsR = () => {
             valor: valor,
             dias: dias
         }
-        
+
+
+
 
         await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
             method: "POST",
@@ -64,9 +79,9 @@ export const ModalsR = () => {
                 toast({
                     position: 'top',
                     render: () => (
-                        <AlertConf/>
+                        <AlertConf />
                     ),
-                  })
+                })
                 setTimeout(() => {
                     window.location.href = "/";
                 }, 2000);
@@ -97,10 +112,10 @@ export const ModalsR = () => {
     const range = (start, end) => {
         const result = [];
         for (let i = start; i < end; i++) {
-          result.push(i);
+            result.push(i);
         }
         return result;
-      };
+    };
 
     const disabledDateTime = () => ({
         disabledHours: () => range(0, 15),
@@ -115,11 +130,11 @@ export const ModalsR = () => {
             <Modal isOpen={isOpen} onClose={onClose} className="modalss">
                 <ModalOverlay />
                 <ModalContent className='modalCont'>
-                    <ModalHeader>Formulario Reserva</ModalHeader>
+                    <ModalHeader className='blue'>Formulario Reserva</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <div className="globalMod">
-                            <div className="cabaI">
+                            <div className="cabaI blue">
                                 <span className="cabInfo">
                                     Cabaña Coigue ofrece alojamiento con WiFi gratuita en Pucón, a 32 km de la cascada Ojos del Caburgua, a 42 km de Ski Pucón y
                                     a 45 km del parque nacional de Huerquehue.
@@ -143,17 +158,21 @@ export const ModalsR = () => {
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}
                                             onChange={handleDateChange}
-                                            placeholder={["Fecha Incio","Fecha Final"]}
+                                            placeholder={["Fecha Incio", "Fecha Final"]}
                                         />
                                     </div>
-                                    <input type="email" className='borderI' placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
+                                    <input type="email" className='borderI' placeholder='Email' onChange={(e) => validateEmail(e)} />
+                                    <span style={{
+                                        fontWeight: 'bold',
+                                        color: 'white',
+                                    }}>{emailError}</span>
                                     <input type="number" className='borderI' placeholder='Telefono' onChange={(e) => setTelefono(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
                                     <input type="number" className='borderI' placeholder='Cantidad de Personas' onChange={(e) => setPersonas(e.target.value)} />
 
                                     <TimePicker
                                         disabledTime={disabledDateTime}
-                                        onChange={(e)=> setCheckIn(e.$H + ":" + "00")}
+                                        onChange={(e) => setCheckIn(e.$H + ":" + "00")}
                                         placeholder='Horario CheckIn'
                                     />
                                     <div>
@@ -164,10 +183,10 @@ export const ModalsR = () => {
                                     </div>
                                     <div className="children">
                                         <label for="mascotas" className="cantD">Viene con mascotas?</label>
-                                        <Checkbox onChange={(e) => setMascotas(e.target.checked)}/>
+                                        <Checkbox onChange={(e) => setMascotas(e.target.checked)} />
                                     </div>
-                                   
-                                    <Alert sendEmail={sendEmail}/>
+
+                                    <Alert sendEmail={sendEmail} />
                                 </div>
                             </div>
                         </div>

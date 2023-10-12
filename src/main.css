@@ -126,3 +126,9 @@ html{
 
    
 }
+body{
+    font-weight: bold;
+}
+.blue{
+    color: #206dc7;
+}
