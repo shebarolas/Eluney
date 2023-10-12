@@ -15,7 +15,6 @@ export const NavBar = () => {
                     <div className="optionsL ">
                         <a href="#"><span className='border'>Inicio</span></a>
                         <a href="#cafeteria"><span className='border'>Cafeteria</span></a>
-                        <a href=""><span className='border'>Turismo</span></a>
 
                     </div>
                     <div className="logo">
