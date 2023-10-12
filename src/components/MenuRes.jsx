@@ -26,9 +26,6 @@ export const MenuRes = () => {
                 <MenuItem as="a" href="#cafeteria" command='⌘N'>
                     Cafeteria
                 </MenuItem>
-                <MenuItem as="a" href="#"command='⌘⇧N'>
-                    Turismo
-                </MenuItem>
                 <MenuItem as="a" href="#turismo"command='⌘O'>
                     Sitio Turistico
                 </MenuItem>
