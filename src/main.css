@@ -33,7 +33,7 @@ html{
     height: 25rem !important;
     object-fit: cover !important;
 }
-@media (max-width: 748px) {
+@media (max-width: 770px) {
     .css-1u2cvaz{
         display: flex !important;
         grid-template-columns: 1fr;
@@ -51,7 +51,7 @@ html{
         max-width: 27rem !important;
     }
 }
-@media (max-width: 748px){
+@media (max-width: 770px){
     .optionsL, .optionsR{
      display: none !important;
     }
@@ -67,7 +67,7 @@ html{
     }
  
  }
- @media (max-width: 748px){
+ @media (max-width: 770px){
     .cards{
         grid-template-rows: 1fr 1fr;
         grid-template-columns: none;
@@ -122,10 +122,13 @@ html{
         grid-template-columns: none !important;
         place-items: center !important;
     }
+    .footer{
+        grid-template-columns: 1fr;
+    }
 }
 
 
-@media (min-width: 768px){
+@media (min-width: 770px){
     .cabaR{
         display: none;
     }
@@ -134,7 +137,23 @@ html{
 }
 body{
     font-weight: bold;
+    background-color: rgb(218, 218, 218);
 }
 .blue{
-    color: #206dc7;
+    color: #003087;
+}
+:where(.css-dev-only-do-not-override-12jzuas).ant-picker-dropdown .ant-picker-time-panel-column:not(:first-child){
+    display: none;
+}
+:where(.css-dev-only-do-not-override-12jzuas).ant-picker-dropdown .ant-picker-time-panel{
+    width: 7rem;
+}
+:where(.css-dev-only-do-not-override-12jzuas).ant-picker{
+    width: 15rem;
+}
+:where(.css-dev-only-do-not-override-12jzuas).ant-picker-range {
+    height: 2rem;
+}
+.cantD{
+    text-align: left;
 }

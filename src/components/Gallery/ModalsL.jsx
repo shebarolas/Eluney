@@ -142,8 +142,8 @@ export const ModalsL = () => {
                     <ModalHeader className='blue'>Formulario Reserva</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <div className="globalMod blue">
-                            <div className="cabaI">
+                        <div className="globalMod">
+                            <div className="cabaI blue">
                                 <span className="cabInfo">
                                     Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua.
                                     Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
@@ -187,7 +187,7 @@ export const ModalsL = () => {
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
                                         <br/>
-                                        <span className='cantD'>Valor: {valor}</span>
+                                        <span className='cantD'>Valor Referencial: {valor}</span>
 
                                     </div>
                                     <div className="children">

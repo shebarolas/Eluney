@@ -5,7 +5,7 @@
     padding: 2rem;
     gap: 2rem;
     border-bottom: 1px solid #ccc;
-    color: #206dc7;
+    color: #003087;
     font-weight: bold;
  }
 .imgsCafe{
@@ -17,6 +17,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
+    gap: 1rem;
 }
 .imgCafe{
     display: grid;
@@ -36,7 +37,7 @@
 }
 .textCafe{
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
 }
 .sliderCafe{
     display: none !important;

@@ -34,7 +34,7 @@ export const Alert = ({sendEmail}) => {
   
               <AlertDialogBody>
                 ¿Esta seguro de realizar la reservación?
-                Una vez se envie el formulario le llegará un email para recepcionar la reserva.
+                Una vez se envie el formulario le llegará un email de recepción
               </AlertDialogBody>
   
               <AlertDialogFooter>

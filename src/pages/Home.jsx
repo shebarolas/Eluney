@@ -14,7 +14,7 @@ export const Home = () => {
       <Hero />
       <div className="homes">
         <div className="home">
-          <h1 className='textH'>Cafeteria y Cabañas Eluney</h1>
+          <h1 className='textH'>Lodge Eluney</h1>
           <div className="infoHome">
             <span className="textCafe">
              Eluney o "regalo del cielo" es un proyecto familiar que comenzó por las propiedades medioambientales que ofrecen los terrenos de Palguin Alto,
