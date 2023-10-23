@@ -186,7 +186,7 @@ export const ModalsR = () => {
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
                                         <br />
-                                        <span className='cantD'>Valor: {valor}</span>
+                                        <span className='cantD'>Valor Referencial: {valor}</span>
 
                                     </div>
                                     <div className="children">
