@@ -168,6 +168,7 @@ export const ModalsL = () => {
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}
                                             onChange={handleDateChange}
+                                            className='height'
                                             placeholder={["Fecha Incio","Fecha Final"]}
                                         />
                                     </div>
@@ -186,6 +187,7 @@ export const ModalsL = () => {
                                         format={format}
                                         onChange={(e) => setCheckIn(e.$H + ":" + "00")}
                                         placeholder='Horario CheckIn'
+                                        className="width"
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>

@@ -48,4 +48,9 @@
 .cantD{
     color: white;
 }
-
+.width{
+    width: 15rem;
+}
+.height{
+    height: 2rem;
+}

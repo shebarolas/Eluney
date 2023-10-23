@@ -168,6 +168,7 @@ export const ModalsR = () => {
                                         <DatePicker.RangePicker size={"small"}
                                             onChange={handleDateChange}
                                             placeholder={["Fecha Incio", "Fecha Final"]}
+                                            className='height'
                                         />
                                     </div>
                                     <input type="email" className='borderI' placeholder='Email' onChange={(e) => validateEmail(e)} />
@@ -184,6 +185,7 @@ export const ModalsR = () => {
                                         format={format}
                                         onChange={(e) => setCheckIn(e.$H + ":" + "00")}
                                         placeholder='Horario CheckIn'
+                                        className='width'
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
