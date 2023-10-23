@@ -142,10 +142,10 @@ body{
 .blue{
     color: #003087;
 }
-:where(.css-dev-only-do-not-override-12jzuas).ant-picker-dropdown .ant-picker-time-panel-column:not(:first-child){
+/* :where(.css-dev-only-do-not-override-12jzuas).ant-picker-dropdown .ant-picker-time-panel-column:not(:first-child){
     display: none;
-}
-:where(.css-dev-only-do-not-override-12jzuas).ant-picker-dropdown .ant-picker-time-panel{
+} */
+/* :where(.css-dev-only-do-not-override-12jzuas).ant-picker-dropdown .ant-picker-time-panel{
     width: 7rem;
 }
 :where(.css-dev-only-do-not-override-12jzuas).ant-picker{
@@ -153,10 +153,13 @@ body{
 }
 :where(.css-dev-only-do-not-override-12jzuas).ant-picker-range {
     height: 2rem;
-}
+} */
 .cantD{
     text-align: left;
 }
 .asd{
     background: red;
+}
+.ant-picker-content:nth-child(2){
+    display: none !important;
 }

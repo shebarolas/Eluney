@@ -20,6 +20,7 @@ import { AlertConf } from './AlertConf';
 const { RangePicker } = DatePicker;
 import validator from 'validator'
 import { AlerRej } from './AlerRej';
+const format = "HH"
 
 export const ModalsL = () => {
     const [alert, setAlert] = useState(false);
@@ -113,6 +114,7 @@ export const ModalsL = () => {
             const precio = 70000;
             setValor(precio * days);
             setFecha(dateString);
+            console.log(checkIn);
         }
     };
 
@@ -181,6 +183,7 @@ export const ModalsL = () => {
 
                                     <TimePicker
                                         disabledTime={disabledDateTime}
+                                        format={format}
                                         onChange={(e) => setCheckIn(e.$H + ":" + "00")}
                                         placeholder='Horario CheckIn'
                                     />

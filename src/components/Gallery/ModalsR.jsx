@@ -20,6 +20,7 @@ import { Alert } from './Alert';
 const { RangePicker } = DatePicker;
 import validator from 'validator'
 import { AlerRej } from './AlerRej';
+const format = "HH";
 
 export const ModalsR = () => {
     const toast = useToast()
@@ -180,6 +181,7 @@ export const ModalsR = () => {
 
                                     <TimePicker
                                         disabledTime={disabledDateTime}
+                                        format={format}
                                         onChange={(e) => setCheckIn(e.$H + ":" + "00")}
                                         placeholder='Horario CheckIn'
                                     />
