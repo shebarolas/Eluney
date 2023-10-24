@@ -179,7 +179,10 @@ export const ModalsR = () => {
                                     <input type="number" className='borderI' placeholder='Telefono' onChange={(e) => setTelefono(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
                                     <input type="number" className='borderI' placeholder='Cantidad de Personas' onChange={(e) => setPersonas(e.target.value)} />
-
+                                    <spam style={{
+                                        fontWeight: 'bold',
+                                        color: 'white'
+                                    }}>El horario de Check In es a partir de las 15 hrs</spam>
                                     <TimePicker
                                         disabledTime={disabledDateTime}
                                         format={format}
