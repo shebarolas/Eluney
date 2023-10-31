@@ -79,7 +79,6 @@ export const ModalsL = () => {
                 "Content-Type": "application/json",
             },
         }).then((res) => {
-            console.log(res);
             if (res.status > 199 && res.status < 300) {
                 toast({
                     position: 'top',
@@ -92,7 +91,6 @@ export const ModalsL = () => {
                 }, 2000);
 
             } else {
-                console.log(res.headers);
                 toast({
                     position: 'top',
                     render: () => (
@@ -117,6 +115,16 @@ export const ModalsL = () => {
         }
     }
         
+    }
+
+    const validarCheck = (e) => {
+        console.log(e.$H);
+        if(e.$H < 15){
+            setCheckIn('');
+        }else{
+            setCheckIn(e.$H + ":" + "00");
+            console.log(checkIn);
+        }
     }
 
     const [selectedDates, setSelectedDates] = useState([]);
@@ -182,7 +190,7 @@ export const ModalsL = () => {
                                 <div className="alls">
                                     <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} required />
                                     <input type="text" className='borderI' placeholder='Apellido' onChange={(e) => setApellidos(e.target.value)} />
-                                    <input type="text" className='borderI' placeholder='Rut' onChange={(e) => validateRut(e)} />
+                                    <input type="text" className='borderI' placeholder='Rut XXXXXXXX-X' onChange={(e) => validateRut(e)} />
                                     <div className="fechaA">
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}
@@ -207,7 +215,7 @@ export const ModalsL = () => {
                                     <TimePicker
                                         disabledTime={disabledDateTime}
                                         format={format}
-                                        onChange={(e) => setCheckIn(e.$H + ":" + "00")}
+                                        onChange={(e) => validarCheck(e)}
                                         placeholder='Horario CheckIn'
                                         className="width"
                                     />
@@ -222,6 +230,7 @@ export const ModalsL = () => {
                                         <Checkbox onChange={(e) => setMascotas(e.target.checked)} />
                                     </div>
                                     <Alert sendEmail={sendEmail} />
+                                   
                                 </div>
                             </div>
                         </div>

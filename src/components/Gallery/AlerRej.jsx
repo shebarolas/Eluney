@@ -23,7 +23,7 @@ export const AlerRej = () => {
                     Error en el Formulario!!
                 </AlertTitle>
                 <AlertDescription maxWidth='sm'>
-                    No se ha podido enviar el formulario, campos incompletos!!!!!!
+                    No se ha podido enviar el formulario, existen datos incompletos o invalidos, verificar rut y horario de Check In!!!!!!
                 </AlertDescription>
             </Alert>
         </>
