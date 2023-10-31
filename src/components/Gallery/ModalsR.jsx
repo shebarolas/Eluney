@@ -92,7 +92,7 @@ export const ModalsR = () => {
                     window.location.href = "/";
                 }, 2000);
             }else{
-                console.log(res);
+                console.log(res.body);
                 toast({
                     position: 'top',
                     render: () => (
