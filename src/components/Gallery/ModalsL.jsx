@@ -107,11 +107,14 @@ export const ModalsL = () => {
 
     const validateRut = (e) => {
         const value = e.target.value;
-        const validate = validateRUT(value);
-        if(validate){
+        if(value.length > 2) {
+            const validate = validateRUT(value);
+            console.log(validate);
+            if(validate){
             setValid(validate);
             setRut(value);
         }
+    }
         
     }
 

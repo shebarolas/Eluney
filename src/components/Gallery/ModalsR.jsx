@@ -108,11 +108,15 @@ export const ModalsR = () => {
 
     const validateRut = (e) => {
         const value = e.target.value;
-        const validate = validateRUT(value);
-        if(validate){
+        if(value.length > 2) {
+            const validate = validateRUT(value);
+            console.log(validate);
+            if(validate){
             setValid(validate);
             setRut(value);
         }
+        }
+        
         
     }
 
@@ -215,7 +219,8 @@ export const ModalsR = () => {
                                         <Checkbox onChange={(e) => setMascotas(e.target.checked)} />
                                     </div>
 
-                                    <Alert sendEmail={sendEmail} />
+                                    {/* <Alert sendEmail={sendEmail} /> */}
+                                    <button>enviar</button>
                                 </div>
                             </div>
                         </div>
