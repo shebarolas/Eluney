@@ -219,8 +219,8 @@ export const ModalsR = () => {
                                         <Checkbox onChange={(e) => setMascotas(e.target.checked)} />
                                     </div>
 
-                                    {/* <Alert sendEmail={sendEmail} /> */}
-                                    <button>enviar</button>
+                                    <Alert sendEmail={sendEmail} />
+                                    
                                 </div>
                             </div>
                         </div>
