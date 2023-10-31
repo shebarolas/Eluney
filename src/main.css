@@ -137,7 +137,7 @@ html{
 }
 body{
     font-weight: bold;
-    background-color: rgb(190, 190, 190);
+    background: rgb(236, 236, 236) !important;
 }
 .blue{
     color: #003087;
