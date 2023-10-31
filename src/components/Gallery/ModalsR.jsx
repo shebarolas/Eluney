@@ -124,10 +124,10 @@ export const ModalsR = () => {
     const validarCheck = (e) => {
         console.log(e.$H);
         if(e.$H < 15){
-            setCheckIn('');
+   
         }else{
             setCheckIn(e.$H + ":" + "00");
-            console.log(checkIn);
+            
         }
     }
 
