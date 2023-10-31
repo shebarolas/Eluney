@@ -20,7 +20,9 @@ import { AlertConf } from './AlertConf';
 const { RangePicker } = DatePicker;
 import validator from 'validator'
 import { AlerRej } from './AlerRej';
+import { validateRUT } from 'validar-rut';
 const format = "HH"
+
 
 export const ModalsL = () => {
     const [alert, setAlert] = useState(false);
@@ -36,6 +38,7 @@ export const ModalsL = () => {
     const [rut, setRut] = useState("");
     const [telefono, setTelefono] = useState("");
     const [checkIn, setCheckIn] = useState("");
+    const [valid, setValid] = useState(false);
 
     const toast = useToast()
 
@@ -64,7 +67,8 @@ export const ModalsL = () => {
             checkIn: checkIn,
             mascotas: mascotas,
             valor: valor,
-            dias: dias
+            dias: dias,
+            valid: valid
         }
 
         await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
@@ -80,25 +84,35 @@ export const ModalsL = () => {
                 toast({
                     position: 'top',
                     render: () => (
-                        <AlertConf/>
+                        <AlertConf />
                     ),
-                  })
+                })
                 setTimeout(() => {
                     window.location.href = "/";
                 }, 2000);
-                
-            }else{
+
+            } else {
                 toast({
                     position: 'top',
                     render: () => (
-                        <AlerRej/>
+                        <AlerRej />
                     )
-                  })
+                })
             }
         }).catch((err) => {
             console.log(err);
-            
+
         });
+    }
+
+    const validateRut = (e) => {
+        const value = e.target.value;
+        const validate = validateRUT(value);
+        if(validate){
+            setValid(validate);
+            setRut(value);
+        }
+        
     }
 
     const [selectedDates, setSelectedDates] = useState([]);
@@ -160,16 +174,17 @@ export const ModalsL = () => {
                                 <Acordings />
                             </div>
                             <div className="tods">
+                                
                                 <div className="alls">
                                     <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} required />
                                     <input type="text" className='borderI' placeholder='Apellido' onChange={(e) => setApellidos(e.target.value)} />
-                                    <input type="text" className='borderI' placeholder='Rut' onChange={(e) => setRut(e.target.value)} />
+                                    <input type="text" className='borderI' placeholder='Rut' onChange={(e) => validateRut(e)} />
                                     <div className="fechaA">
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}
                                             onChange={handleDateChange}
                                             className='height'
-                                            placeholder={["Fecha Incio","Fecha Final"]}
+                                            placeholder={["Fecha Incio", "Fecha Final"]}
                                         />
                                     </div>
                                     <input type="email" className='borderI' placeholder='Email' onChange={(e) => validateEmail(e)} />
@@ -194,15 +209,15 @@ export const ModalsL = () => {
                                     />
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
-                                        <br/>
+                                        <br />
                                         <span className='cantD'>Valor Referencial: {valor}</span>
 
                                     </div>
                                     <div className="children">
                                         <label for="hijos" className="cantD">Viene con mascotas?</label>
-                                        <Checkbox onChange={(e) => setMascotas(e.target.checked)}/>
+                                        <Checkbox onChange={(e) => setMascotas(e.target.checked)} />
                                     </div>
-                                    <Alert sendEmail={sendEmail}/>
+                                    <Alert sendEmail={sendEmail} />
                                 </div>
                             </div>
                         </div>

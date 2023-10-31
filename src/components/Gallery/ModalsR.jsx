@@ -20,6 +20,7 @@ import { Alert } from './Alert';
 const { RangePicker } = DatePicker;
 import validator from 'validator'
 import { AlerRej } from './AlerRej';
+import { validateRUT } from 'validar-rut';
 const format = "HH";
 
 export const ModalsR = () => {
@@ -36,8 +37,10 @@ export const ModalsR = () => {
     const [rut, setRut] = useState("");
     const [telefono, setTelefono] = useState("");
     const [checkIn, setCheckIn] = useState("");
+    const [emailError, setEmailError] = useState('');
+    const [valid, setValid] = useState(false);
 
-    const [emailError, setEmailError] = useState('')
+
     const validateEmail = (e) => {
         var email = e.target.value
 
@@ -62,7 +65,8 @@ export const ModalsR = () => {
             checkIn: checkIn,
             mascotas: mascotas,
             valor: valor,
-            dias: dias
+            dias: dias,
+            valid: valid
         }
 
 
@@ -101,6 +105,16 @@ export const ModalsR = () => {
     }
 
     const [selectedDates, setSelectedDates] = useState([]);
+
+    const validateRut = (e) => {
+        const value = e.target.value;
+        const validate = validateRUT(value);
+        if(validate){
+            setValid(validate);
+            setRut(value);
+        }
+        
+    }
 
     const handleDateChange = (dates, dateString) => {
         setSelectedDates(dates);
@@ -162,7 +176,7 @@ export const ModalsR = () => {
                                 <div className="alls">
                                     <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Apellido' onChange={(e) => setApellidos(e.target.value)} />
-                                    <input type="text" className='borderI' placeholder='Rut' onChange={(e) => setRut(e.target.value)} />
+                                    <input type="text" className='borderI' placeholder='Rut XXXXXXXXX-X' onChange={(e) => validateRut(e)} />
                                     <div className="fechaA">
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}
