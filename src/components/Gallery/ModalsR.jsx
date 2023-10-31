@@ -92,6 +92,7 @@ export const ModalsR = () => {
                     window.location.href = "/";
                 }, 2000);
             }else{
+                console.log(res);
                 toast({
                     position: 'top',
                     render: () => (
@@ -115,6 +116,7 @@ export const ModalsR = () => {
             setValid(validate);
             setRut(value);
         }
+
         }
         
         

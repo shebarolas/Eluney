@@ -92,6 +92,7 @@ export const ModalsL = () => {
                 }, 2000);
 
             } else {
+                console.log(res);
                 toast({
                     position: 'top',
                     render: () => (
