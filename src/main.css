@@ -98,12 +98,12 @@ html{
         direction: ltr !important;
     }
     .imgText{
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 25rem 1fr;
         grid-template-columns: none;
     }
     .sliderCafe{
-        height: 22rem !important;
-        width: 15rem !important;
+        height: 19rem !important;
+        width: 13rem !important;
     }
     .imagesCafe{
         height:20rem;
