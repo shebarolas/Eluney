@@ -68,6 +68,18 @@ html{
  
  }
  @media (max-width: 770px){
+
+    .slidersa .slick-next{
+        right: 1rem !important;
+        z-index: 1;
+    }
+    .slidersa .slick-prev{
+        left: 1rem !important;
+        z-index: 1;
+    }
+    .slidersa button{
+        display: grid !important;
+    }
     .cards{
         grid-template-rows: 1fr 1fr;
         grid-template-columns: none;
@@ -91,6 +103,7 @@ html{
     }
     .sliderCafe{
         height: 22rem !important;
+        width: 17rem !important;
     }
     .imagesCafe{
         height:20rem;
