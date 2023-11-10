@@ -138,6 +138,12 @@ html{
     .footer{
         grid-template-columns: 1fr;
     }
+    .informacions span {
+        font-size: .9rem;
+    }
+    html{
+        overflow-x: hidden !important;
+    }
 }
 
 
