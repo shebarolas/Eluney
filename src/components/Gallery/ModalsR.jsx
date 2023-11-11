@@ -40,8 +40,8 @@ export const ModalsR = () => {
     const [checkIn, setCheckIn] = useState("");
     const [emailError, setEmailError] = useState('');
     const [valid, setValid] = useState(false);
-    const {screenWidth} = hook();
-
+    const [validRut, setValidRut] = useState("");
+    const [validFecha, setValidFecha] = useState("");
 
     const validateEmail = (e) => {
         var email = e.target.value
@@ -116,20 +116,23 @@ export const ModalsR = () => {
             console.log(validate);
             if(validate){
             setValid(validate);
+            setValidRut("El rut ingresado es valido")
             setRut(value);
-        }
-
-        }
-        
+            }else{
+                setValidRut("El rut ingresado no es valido")
+            }
+    }
         
     }
     const validarCheck = (e) => {
-        console.log(e.$H);
+
         if(e.$H < 15){
-   
+            setCheckIn('');
+            setValidFecha('Check In superior a las 15 Hrs');
         }else{
             setCheckIn(e.$H + ":" + "00");
-            
+            setValidFecha('');
+          
         }
     }
 
@@ -194,7 +197,10 @@ export const ModalsR = () => {
                                     <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Apellido' onChange={(e) => setApellidos(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Rut XXXXXXXXX-X' onChange={(e) => validateRut(e)} />
-                                   
+                                    <span style={{
+                                        fontWeight: 'bold',
+                                        color: 'white',
+                                    }}>{validRut}</span>
                                     <input type="email" className='borderI' placeholder='Email' onChange={(e) => validateEmail(e)} />
                                     <span style={{
                                         fontWeight: 'bold',
@@ -203,7 +209,7 @@ export const ModalsR = () => {
                                     <input type="number" className='borderI' placeholder='Telefono' onChange={(e) => setTelefono(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
                                     <input type="number" className='borderI' placeholder='Cantidad de Personas' onChange={(e) => setPersonas(e.target.value)} />
-                                    <spam style={{
+                                    <spam className="spam_text" style={{
                                         fontWeight: 'bold',
                                         color: 'white'
                                     }}>El horario de Check In es a partir de las 15 hrs</spam>
@@ -214,6 +220,10 @@ export const ModalsR = () => {
                                         placeholder='Horario CheckIn'
                                         className='width'
                                     />
+                                    <span style={{
+                                        fontWeight: 'bold',
+                                        color: 'white',
+                                    }}>{validFecha}</span>
                                     <div className="fechaA">
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}

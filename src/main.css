@@ -85,6 +85,9 @@ html{
     .slidersa button{
         display: grid !important;
     }
+    .css-pv22qu{
+        margin-top: 7rem !important;
+    }
     .cards{
         grid-template-rows: 1fr 1fr;
         grid-template-columns: none;
@@ -164,7 +167,7 @@ html{
 }
 @media (max-width: 390px){
     .alls{
-        grid-template-rows: repeat(8, 1.5rem);
+        grid-template-rows: repeat(8, 1rem);
         place-items: center;
         width: min-content;
         gap: 1.5em;
