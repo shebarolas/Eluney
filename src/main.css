@@ -154,6 +154,24 @@ html{
 
    
 }
+@media (max-width: 390px){
+    .alls{
+        grid-template-rows: repeat(8, 1.5rem);
+        place-items: center;
+        width: min-content;
+        gap: 1.5em;
+        padding: 1rem 0.3rem;
+        background-color: gray;
+        border-radius: 0.2rem
+    }
+
+}
+@media (max-width: 390px){
+.css-pv22qu {
+    width: 100% !important;
+    max-width: 20rem !important;
+    }
+}
 body{
     font-weight: bold;
     background: rgb(236, 236, 236) !important;
