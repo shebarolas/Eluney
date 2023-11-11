@@ -54,3 +54,10 @@
 .height{
     height: 2rem;
 }
+
+@media (max-width: 770px){
+    .ant-picker-panel:nth-child(2){
+        display: none !important;
+        color: red;
+    }
+}
