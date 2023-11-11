@@ -191,14 +191,6 @@ export const ModalsL = () => {
                                     <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} required />
                                     <input type="text" className='borderI' placeholder='Apellido' onChange={(e) => setApellidos(e.target.value)} />
                                     <input type="text" className='borderI' placeholder='Rut XXXXXXXX-X' onChange={(e) => validateRut(e)} />
-                                    <div className="fechaA">
-                                        <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
-                                        <DatePicker.RangePicker size={"small"}
-                                            onChange={handleDateChange}
-                                            className='height'
-                                            placeholder={["Fecha Incio", "Fecha Final"]}
-                                        />
-                                    </div>
                                     <input type="email" className='borderI' placeholder='Email' onChange={(e) => validateEmail(e)} />
                                     <span style={{
                                         fontWeight: 'bold',
@@ -219,6 +211,15 @@ export const ModalsL = () => {
                                         placeholder='Horario CheckIn'
                                         className="width"
                                     />
+                                    <div className="fechaA">
+                                        <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
+                                        <DatePicker.RangePicker size={"small"}
+                                            onChange={handleDateChange}
+                                            // showTime={{format: "HH:mm"}}
+                                            className='height'
+                                            placeholder={["Fecha Incio", "Fecha Final"]}
+                                        />
+                                    </div>
                                     <div>
                                         <span className='cantD'>Cantidad de noches:  {dias}</span>
                                         <br />
