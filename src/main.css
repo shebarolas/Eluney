@@ -209,4 +209,5 @@ body{
 }
 .ant-picker-panel:nth-child(2){
     display: none !important;
+    color: red;
 }
