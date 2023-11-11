@@ -1,10 +1,7 @@
 .css-79z5gx{
     padding: 0 !important;
 }
-.ant-picker-panel:nth-child(2){
-    display: none !important;
-    color: red;
-}
+
 .css-1u2cvaz{
     display: grid !important;
     grid-template-columns: 1fr;
@@ -56,6 +53,10 @@ html{
     }
 }
 @media (max-width: 770px){
+    .ant-picker-panel:nth-child(2){
+        display: none !important;
+        color: red;
+    }
     .optionsL, .optionsR{
      display: none !important;
     }
