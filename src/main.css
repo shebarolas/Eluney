@@ -167,10 +167,14 @@ html{
 
 }
 @media (max-width: 390px){
-.css-pv22qu {
-    width: 100% !important;
-    max-width: 20rem !important;
-    }
+    .css-pv22qu {
+        width: 100% !important;
+        max-width: 20rem !important;
+        }
+        .borderI{
+            height: 1.6rem;
+            gap: 1.2rem;
+        }
 }
 body{
     font-weight: bold;
