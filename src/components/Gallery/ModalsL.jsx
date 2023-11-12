@@ -21,110 +21,126 @@ const { RangePicker } = DatePicker;
 import validator from 'validator'
 import { AlerRej } from './AlerRej';
 import { validateRUT } from 'validar-rut';
+import { useForm } from "react-hook-form";
 const format = "HH"
 
 
 export const ModalsL = () => {
-    const [alert, setAlert] = useState(false);
-    const [email, setEmail] = useState("");
-    const [nombre, setNombre] = useState("");
-    const [apellidos, setApellidos] = useState("");
     const [cabañas, setCabañas] = useState("Cabaña Laurel");
-    const [personas, setPersonas] = useState("");
     const [fecha, setFecha] = useState("");
     const [dias, setDias] = useState("");
     const [mascotas, setMascotas] = useState(false);
     const [valor, setValor] = useState("");
-    const [rut, setRut] = useState("");
-    const [telefono, setTelefono] = useState("");
     const [checkIn, setCheckIn] = useState("");
+    const [emailError, setEmailError] = useState('');
     const [valid, setValid] = useState(false);
     const [validRut, setValidRut] = useState("");
     const [validFecha, setValidFecha] = useState("");
-    const [erros, setErros] = useState(false);
-
+    const [errosRut, setErrosRut] = useState(true);
+    const [errorEmail, setErrorEmail] = useState(true);
+    const [errosFecha, setErrosFecha] = useState(true);
     const toast = useToast()
 
-    const [emailError, setEmailError] = useState('')
-    const validateEmail = (e) => {
-        var email = e.target.value
-
-        if (validator.isEmail(email)) {
-            setEmailError('Email Valido')
-            setEmail(email);
-        } else {
-            setEmailError('Email Invalido, revise que este correcto')
-        }
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState,
+        setValue
+      } = useForm({
+        mode: "onChange"
+      })
+    
+        // const onSubmit = (data) => {
+        //         console.log(data)
+        // }
+    const verErros = () => {
+        console.log(errors);
     }
 
-    const sendEmail = async () => {
+    // const validateEmail = (e) => {
+    //     var email = e.target.value
+
+    //     if (validator.isEmail(email)) {
+    //         setEmailError('Email Valido')
+    //         setEmail(email);
+    //     } else {
+    //         setEmailError('Email Invalido, revise que este correcto')
+    //     }
+    // }
+
+    const onSubmit = async (data) => {
+        console.log(data);
         const dataSend = {
-            email: email,
-            nombre: nombre,
-            apellidos: apellidos,
-            rut: rut,
-            telefono: telefono,
+            email: data.email,
+            nombre: data.name,
+            apellidos: data.lastname,
+            rut: data.rut,
+            telefono: data.telefono,
             cabañas: cabañas,
-            personas: personas,
+            personas: data.personas,
             fecha: fecha,
             checkIn: checkIn,
             mascotas: mascotas,
             valor: valor,
             dias: dias,
-            valid: valid,
-            erros: erros
+            valid: valid
         }
 
-        await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
-            method: "POST",
-            body: JSON.stringify(dataSend),
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-        }).then((res) => {
-            if (res.status > 199 && res.status < 300) {
-                toast({
-                    position: 'top',
-                    render: () => (
-                        <AlertConf />
-                    ),
-                })
-                setTimeout(() => {
-                    window.location.href = "/";
-                }, 2000);
 
-            } else {
-                toast({
-                    position: 'top',
-                    render: () => (
-                        <AlerRej />
-                    )
-                })
-            }
-        }).catch((err) => {
-            console.log(err);
 
-        });
+
+         await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
+             method: "POST",
+             body: JSON.stringify(dataSend),
+             headers: {
+                 Accept: "application/json",
+                 "Content-Type": "application/json",
+             },
+         }).then((res) => {
+             console.log(res);
+             if (res.status > 199 && res.status < 300) {
+                 toast({
+                     position: 'top',
+                     render: () => (
+                         <AlertConf />
+                     ),
+                 })
+                 setTimeout(() => {
+                     window.location.href = "/";
+                 }, 2000);
+             }else{
+                 console.log(res.headers);
+                 toast({
+                     position: 'top',
+                     render: () => (
+                         <AlerRej/>
+                     )
+                   })
+             }
+         }).catch((err) => {
+             console.log(err);
+         });
     }
 
-    const validateRut = (e) => {
-        const value = e.target.value;
-        if(value.length > 2) {
-            const validate = validateRUT(value);
-            console.log(validate);
-            if(validate){
-            setValid(validate);
-            setValidRut("El rut ingresado es valido")
-            setErros(false);
-            setRut(value);
-            }else{
-                setValidRut("El rut ingresado no es valido")
-                setErros(true);
-            }
-    }
+    
+    // const validateRut = (e) => {
+    //     const value = e.target.value;
+    //     if(value.length > 2) {
+    //         const validate = validateRUT(value);
+    //         console.log(validate);
+    //         if(validate){
+    //         setValid(validate);
+    //         setValidRut("El rut ingresado es valido")
+    //         setErros(false);
+    //         setRut(value);
+    //         }else{
+    //             setValidRut("El rut ingresado no es valido")
+    //             setErros(true);
+    //         }
+    // }
         
-    }
+    // }
 
     const validarCheck = (e) => {
 
@@ -139,6 +155,9 @@ export const ModalsL = () => {
           
         }
     }
+
+    const rut = watch("rut");
+    const email = watch("email");
 
     const [selectedDates, setSelectedDates] = useState([]);
 
@@ -199,36 +218,68 @@ export const ModalsL = () => {
                                 <Acordings />
                             </div>
                             <div className="tods">
-                                
-                                <div className="alls">
-                                    <input type="text" className='borderI' placeholder='Nombre' onChange={(e) => setNombre(e.target.value)} required />
-                                    <input type="text" className='borderI' placeholder='Apellido' onChange={(e) => setApellidos(e.target.value)} />
-                                    <input type="text" className='borderI' placeholder='Rut XXXXXXXX-X' onChange={(e) => validateRut(e)} />
+                            <form className="alls">
+                                    <input type="text" className='borderI' placeholder='Nombre' {...register("name", {required: true})} />
+                                    <input type="text" className='borderI' placeholder='Apellido' {...register("lastname", {required: true})} />
+                                    <input type="text" className='borderI' placeholder='Rut XXXXXXXXX-X' value={rut}  {...register("rut", { 
+                                        required: true,
+                                        validate: (value) => {
+                                            if(value.length > 2) {
+                                                const validate = validateRUT(value);
+                                                if(validate){
+                                                setValid(validate);
+                                                setValidRut("El rut ingresado es valido")
+                                                setErrosRut(false);
+                                                // setRut(value);
+                                                //setValue("rut", value);
+  
+                                                }else{
+                                                    //setValue("rut", "");
+                                                    setValidRut("El rut ingresado no es valido")
+                                                    setErrosRut(true);
+                                                }
+                                            
+                                            }else {
+                                                // setValue("rut", "");
+                                                setErrosRut(true);
+                                            } 
+                                        }
+                                    })} />
                                     <span style={{
                                         fontWeight: 'bold',
                                         color: 'white',
                                     }}>{validRut}</span>
-                                    <input type="email" className='borderI' placeholder='Email' onChange={(e) => validateEmail(e)} />
+                                    <input type="email" className='borderI' placeholder='Email' value={email} {...register("email", {
+                                        required: true,
+                                        validate: (value) => {
+                                            if (validator.isEmail(value)) {
+                                                setEmailError('Email Valido');
+                                                setErrorEmail(false);
+                                            } else {
+                                                setEmailError('Email Invalido, revise que este correcto');
+                                                setErrorEmail(true);
+                                            }
+                                        }
+                                    })} />
                                     <span style={{
                                         fontWeight: 'bold',
                                         color: 'white',
                                     }}>{emailError}</span>
-                                    <input type="number" className='borderI' placeholder='Telefono' onChange={(e) => setTelefono(e.target.value)} />
+                                    <input type="number" className='borderI' placeholder='Telefono' {...register("telefono", {required: true})}/>
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
-                                    <input type="number" className='borderI' placeholder='Cantidad de Personas' onChange={(e) => setPersonas(e.target.value)} />
+                                    <input type="number" className='borderI' placeholder='Cantidad de Personas' {...register("personas", {required: true})} />
                                     <spam className="spam_text" style={{
                                         fontWeight: 'bold',
                                         color: 'white'
                                     }}>El horario de Check In es a partir de las 15 hrs</spam>
-
                                     <TimePicker
                                         disabledTime={disabledDateTime}
                                         format={format}
                                         onChange={(e) => validarCheck(e)}
                                         placeholder='Horario CheckIn'
-                                        className="width"
+                                        className='width'
                                     />
-                                     <span style={{
+                                    <span style={{
                                         fontWeight: 'bold',
                                         color: 'white',
                                     }}>{validFecha}</span>
@@ -236,9 +287,8 @@ export const ModalsL = () => {
                                         <span style={{ fontSize: '.9rem' }}>Seleccionar Fecha de Hospedaje</span>
                                         <DatePicker.RangePicker size={"small"}
                                             onChange={handleDateChange}
-                                            // showTime={{format: "HH:mm"}}
-                                            className='height'
                                             placeholder={["Fecha Incio", "Fecha Final"]}
+                                            className='height'
                                         />
                                     </div>
                                     <div>
@@ -248,12 +298,14 @@ export const ModalsL = () => {
 
                                     </div>
                                     <div className="children">
-                                        <label for="hijos" className="cantD">Viene con mascotas?</label>
+                                        <label for="mascotas" className="cantD">Viene con mascotas?</label>
                                         <Checkbox onChange={(e) => setMascotas(e.target.checked)} />
-                                    </div>
-                                    <Alert sendEmail={sendEmail} />
-                                   
-                                </div>
+                                    </div> 
+
+                                    
+                                    <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail} />
+                                    
+                                </form>
                             </div>
                         </div>
                     </ModalBody>
