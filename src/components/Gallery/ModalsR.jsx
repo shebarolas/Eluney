@@ -70,6 +70,7 @@ export const ModalsR = () => {
     // }
 
     const onSubmit = async (data) => {
+        console.log(data);
         const dataSend = {
             email: data.email,
             nombre: data.name,
@@ -89,64 +90,64 @@ export const ModalsR = () => {
 
 
 
-        await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
-            method: "POST",
-            body: JSON.stringify(dataSend),
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-        }).then((res) => {
-            console.log(res);
-            if (res.status > 199 && res.status < 300) {
-                toast({
-                    position: 'top',
-                    render: () => (
-                        <AlertConf />
-                    ),
-                })
-                setTimeout(() => {
-                    window.location.href = "/";
-                }, 2000);
-            }else{
-                console.log(res.headers);
-                toast({
-                    position: 'top',
-                    render: () => (
-                        <AlerRej/>
-                    )
-                  })
-            }
-        }).catch((err) => {
-            console.log(err);
-        });
+         await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
+             method: "POST",
+             body: JSON.stringify(dataSend),
+             headers: {
+                 Accept: "application/json",
+                 "Content-Type": "application/json",
+             },
+         }).then((res) => {
+             console.log(res);
+             if (res.status > 199 && res.status < 300) {
+                 toast({
+                     position: 'top',
+                     render: () => (
+                         <AlertConf />
+                     ),
+                 })
+                 setTimeout(() => {
+                     window.location.href = "/";
+                 }, 2000);
+             }else{
+                 console.log(res.headers);
+                 toast({
+                     position: 'top',
+                     render: () => (
+                         <AlerRej/>
+                     )
+                   })
+             }
+         }).catch((err) => {
+             console.log(err);
+         });
     }
 
     const [selectedDates, setSelectedDates] = useState([]);
 
-    // const validateRut = (value) => {
-    //     if(value.length > 2) {
-    //         const validate = validateRUT(value);
+    //  const validateRut = (value) => {
+    //      if(value.length > 2) {
+    //          const validate = validateRUT(value);
     //         console.log(validate);
-    //         if(validate){
-    //         setValid(validate);
-    //         setValidRut("El rut ingresado es valido")
-    //         setErrosRut(false);
-    //         // setRut(value);
-    //         setValue("rut", value);
-    //         return false;
-    //         }else{
-    //             setValue("rut", "");
-    //             setValidRut("El rut ingresado no es valido")
-    //             setErrosRut(true);
-    //             return true;
-    //         }
+    //          if(validate){
+    //          setValid(validate);
+    //          setValidRut("El rut ingresado es valido")
+    //          setErrosRut(false);
+    //          // setRut(value);
+    //          setValue("rut", value);
+    //          return false;
+    //          }else{
+    //              setValue("rut", "");
+    //              setValidRut("El rut ingresado no es valido")
+    //              setErrosRut(true);
+    //              return true;
+    //          }
         
-    //     }else {
-    //         setValue("rut", "");
+    //      }else {
+    //          setValue("rut", "");
     //         return false;
-    //     }    
-    // }
+    //      }    
+    //  }
 
     const validarCheck = (e) => {
 
@@ -308,7 +309,7 @@ export const ModalsR = () => {
                                     </div> 
 
                                     
-                                    <Alert sendEmail={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail} />
+                                    <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail} />
                                     
                                 </form>
                             </div>
