@@ -37,6 +37,8 @@ export const ModalsL = () => {
     const [validRut, setValidRut] = useState("");
     const [validFecha, setValidFecha] = useState("");
     const [errosRut, setErrosRut] = useState(true);
+    const [errorTel, setErrorTel] = useState(true);
+    const [errTel, setErrTel] = useState();
     const [errorEmail, setErrorEmail] = useState(true);
     const [errosFecha, setErrosFecha] = useState(true);
     const toast = useToast()
@@ -265,7 +267,21 @@ export const ModalsL = () => {
                                         fontWeight: 'bold',
                                         color: 'white',
                                     }}>{emailError}</span>
-                                    <input type="number" className='borderI' placeholder='Telefono' {...register("telefono", {required: true})}/>
+                                    <input type="number" className='borderI' placeholder='Telefono' {...register("telefono", {required: true, 
+                                        validate: (value) => {
+                                            if(value.length === 8){
+                                                setErrorTel(false);
+                                                setErrTel("Numero Valido");
+                                            }else{
+                                                setErrorTel(true);
+                                                setErrTel("Error, numero de telefono debe tener 8 digitos, sin el 9")
+                                            }
+                                        }
+                                    })}/>
+                                    <span style={{
+                                        fontWeight: 'bold',
+                                        color: 'white',
+                                    }}>{errTel}</span>
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
                                     <input type="number" className='borderI' placeholder='Cantidad de Personas' {...register("personas", {required: true})} />
                                     <spam className="spam_text" style={{

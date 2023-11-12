@@ -39,6 +39,8 @@ export const ModalsR = () => {
     const [validFecha, setValidFecha] = useState("");
     const [errosRut, setErrosRut] = useState(true);
     const [errorEmail, setErrorEmail] = useState(true);
+    const [errorTel, setErrorTel] = useState(true);
+    const [errTel, setErrTel] = useState();
     const [errosFecha, setErrosFecha] = useState(true);
 
     const {
@@ -271,7 +273,21 @@ export const ModalsR = () => {
                                         fontWeight: 'bold',
                                         color: 'white',
                                     }}>{emailError}</span>
-                                    <input type="number" className='borderI' placeholder='Telefono' {...register("telefono", {required: true})}/>
+                                    <input type="number" className='borderI' placeholder='Telefono' {...register("telefono", {required: true, 
+                                        validate: (value) => {
+                                            if(value.length === 8){
+                                                setErrorTel(false);
+                                                setErrTel("Numero Valido");
+                                            }else{
+                                                setErrorTel(true);
+                                                setErrTel("Error, numero de telefono debe tener 8 digitos, sin el 9")
+                                            }
+                                        }
+                                    })}/>
+                                    <span style={{
+                                        fontWeight: 'bold',
+                                        color: 'white',
+                                    }}>{errTel}</span>
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
                                     <input type="number" className='borderI' placeholder='Cantidad de Personas' {...register("personas", {required: true})} />
                                     <spam className="spam_text" style={{
@@ -309,7 +325,7 @@ export const ModalsR = () => {
                                     </div> 
 
                                     
-                                    <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail} />
+                                    <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail || errorTel} />
                                     
                                 </form>
                             </div>
