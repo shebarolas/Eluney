@@ -41,6 +41,7 @@ export const ModalsL = () => {
     const [valid, setValid] = useState(false);
     const [validRut, setValidRut] = useState("");
     const [validFecha, setValidFecha] = useState("");
+    const [erros, setErros] = useState(false);
 
     const toast = useToast()
 
@@ -70,7 +71,8 @@ export const ModalsL = () => {
             mascotas: mascotas,
             valor: valor,
             dias: dias,
-            valid: valid
+            valid: valid,
+            erros: erros
         }
 
         await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
@@ -114,9 +116,11 @@ export const ModalsL = () => {
             if(validate){
             setValid(validate);
             setValidRut("El rut ingresado es valido")
+            setErros(false);
             setRut(value);
             }else{
                 setValidRut("El rut ingresado no es valido")
+                setErros(true);
             }
     }
         
@@ -127,9 +131,11 @@ export const ModalsL = () => {
         if(e.$H < 15){
             setCheckIn('');
             setValidFecha('Check In superior a las 15 Hrs');
+            setErros(true);
         }else{
             setCheckIn(e.$H + ":" + "00");
             setValidFecha('');
+            setErros(false);
           
         }
     }

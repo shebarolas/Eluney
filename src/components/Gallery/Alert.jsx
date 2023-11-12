@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
     AlertDialog,
     AlertDialogBody,
@@ -11,16 +11,15 @@ import {
     Button,
   } from '@chakra-ui/react'
 
-export const Alert = ({sendEmail}) => {
+export const Alert = ({onSubmit, isValid}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const cancelRef = React.useRef()
-  
+    console.log(isValid)
     return (
       <>
-        <Button colorScheme='green' onClick={onOpen}>
+        <Button colorScheme='green' onClick={onOpen} isDisabled={isValid}>
           Enviar
         </Button>
-  
         <AlertDialog
           isOpen={isOpen}
           leastDestructiveRef={cancelRef}
@@ -41,7 +40,7 @@ export const Alert = ({sendEmail}) => {
                 <Button ref={cancelRef} onClick={onClose}>
                   Cancelar
                 </Button>
-                <Button colorScheme='green' onClick={sendEmail} ml={3}>
+                <Button colorScheme='green' onClick={onSubmit} ml={3}>
                   Enviar
                 </Button>
               </AlertDialogFooter>
