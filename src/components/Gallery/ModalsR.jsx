@@ -21,7 +21,7 @@ const { RangePicker } = DatePicker;
 import validator from 'validator'
 import { AlerRej } from './AlerRej';
 import { validateRUT } from 'validar-rut';
-import { useForm } from "react-hook-form"
+import { useForm } from "react-hook-form";
 const format = "HH";
 
 export const ModalsR = () => {
