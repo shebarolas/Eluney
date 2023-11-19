@@ -329,7 +329,7 @@ export const ModalsR = () => {
                                     </div>
 
 
-                                    <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail || errorTel} />
+                                    <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail || errorTel} isLoading={isLoading}/>
 
                                 </form>
                             </div>
