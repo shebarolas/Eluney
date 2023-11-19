@@ -14,7 +14,6 @@ import {
 export const Alert = ({onSubmit, isValid, isLoading}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const cancelRef = React.useRef()
-    console.log(isValid)
     return (
       <>
         <Button colorScheme='green' onClick={onOpen} isDisabled={isValid}>

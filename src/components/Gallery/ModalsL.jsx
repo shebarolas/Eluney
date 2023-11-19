@@ -73,7 +73,6 @@ export const ModalsL = () => {
     // }
 
     const onSubmit = async (data) => {
-        console.log(data);
         const dataSend = {
             email: data.email,
             nombre: data.name,
@@ -99,7 +98,7 @@ export const ModalsL = () => {
                  "Content-Type": "application/json",
              },
          }).then((res) => {
-             console.log(res);
+            
              if (res.status > 199 && res.status < 300) {
                  toast({
                      position: 'top',
@@ -111,7 +110,7 @@ export const ModalsL = () => {
                      window.location.href = "/";
                  }, 2000);
              }else{
-                 console.log(res.headers);
+                 
                  toast({
                      position: 'top',
                      render: () => (

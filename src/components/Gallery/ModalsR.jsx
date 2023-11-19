@@ -101,7 +101,7 @@ export const ModalsR = () => {
                 "Content-Type": "application/json",
             },
         }).then((res) => {
-            console.log(res);
+            
             if (res.status > 199 && res.status < 300) {
                 toast({
                     position: 'top',
@@ -113,7 +113,7 @@ export const ModalsR = () => {
                     window.location.href = "/";
                 }, 2000);
             } else {
-                console.log(res.headers);
+                
                 toast({
                     position: 'top',
                     render: () => (
