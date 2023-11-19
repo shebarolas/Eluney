@@ -102,6 +102,7 @@ export const ModalsR = () => {
         }).then((res) => {
             console.log(res);
             if (res.status > 199 && res.status < 300) {
+                setIsLoading(true);
                 toast({
                     position: 'top',
                     render: () => (

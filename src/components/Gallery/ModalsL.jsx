@@ -90,8 +90,6 @@ export const ModalsL = () => {
             valid: valid
         }
 
-        setIsLoading(true);
-
 
          await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
              method: "POST",
@@ -103,6 +101,7 @@ export const ModalsL = () => {
          }).then((res) => {
              console.log(res);
              if (res.status > 199 && res.status < 300) {
+                    setIsLoading(true);
                  toast({
                      position: 'top',
                      render: () => (
