@@ -26,7 +26,7 @@ const format = "HH";
 
 export const ModalsR = () => {
     const toast = useToast()
-  
+
     const [cabañas, setCabañas] = useState("Cabaña Coigue");
     const [fecha, setFecha] = useState("");
     const [dias, setDias] = useState("");
@@ -49,13 +49,13 @@ export const ModalsR = () => {
         watch,
         formState,
         setValue
-      } = useForm({
+    } = useForm({
         mode: "onChange"
-      })
-    
-        // const onSubmit = (data) => {
-        //         console.log(data)
-        // }
+    })
+
+    // const onSubmit = (data) => {
+    //         console.log(data)
+    // }
     const verErros = () => {
         console.log(errors);
     }
@@ -92,37 +92,37 @@ export const ModalsR = () => {
 
 
 
-         await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
-             method: "POST",
-             body: JSON.stringify(dataSend),
-             headers: {
-                 Accept: "application/json",
-                 "Content-Type": "application/json",
-             },
-         }).then((res) => {
-             console.log(res);
-             if (res.status > 199 && res.status < 300) {
-                 toast({
-                     position: 'top',
-                     render: () => (
-                         <AlertConf />
-                     ),
-                 })
-                 setTimeout(() => {
-                     window.location.href = "/";
-                 }, 2000);
-             }else{
-                 console.log(res.headers);
-                 toast({
-                     position: 'top',
-                     render: () => (
-                         <AlerRej/>
-                     )
-                   })
-             }
-         }).catch((err) => {
-             console.log(err);
-         });
+        await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
+            method: "POST",
+            body: JSON.stringify(dataSend),
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+            },
+        }).then((res) => {
+            console.log(res);
+            if (res.status > 199 && res.status < 300) {
+                toast({
+                    position: 'top',
+                    render: () => (
+                        <AlertConf />
+                    ),
+                })
+                setTimeout(() => {
+                    window.location.href = "/";
+                }, 2000);
+            } else {
+                console.log(res.headers);
+                toast({
+                    position: 'top',
+                    render: () => (
+                        <AlerRej />
+                    )
+                })
+            }
+        }).catch((err) => {
+            console.log(err);
+        });
     }
 
     const [selectedDates, setSelectedDates] = useState([]);
@@ -144,7 +144,7 @@ export const ModalsR = () => {
     //              setErrosRut(true);
     //              return true;
     //          }
-        
+
     //      }else {
     //          setValue("rut", "");
     //         return false;
@@ -153,18 +153,18 @@ export const ModalsR = () => {
 
     const validarCheck = (e) => {
 
-        if(e.$H < 15){
+        if (e.$H < 15) {
             setCheckIn('');
-            setValidFecha('Check In superior a las 15 Hrs');
+            setValidFecha('Check In debe ser superior a las 15 hrs');
             setErrosFecha(true)
-        }else{
+        } else {
             setCheckIn(e.$H + ":" + "00");
             setValidFecha('');
             setErrosFecha(false);
         }
     }
 
- 
+
 
     const handleDateChange = (dates, dateString) => {
         setSelectedDates(dates);
@@ -221,36 +221,36 @@ export const ModalsR = () => {
                                     El Checkin para las cabañas debe ser despues de las 15:00 hrs.
                                 </span>
                                 <span className="cabInfo">
-                                    Todas las mañanas se sirve un desayuno a la carta (El desayuno se paga aparte)
+                                    Todas las mañanas se sirve un desayuno a la carta (El desayuno lleva un coste adicional)
                                 </span>
                                 <Acordings />
                             </div>
                             <div className="tods">
                                 <form className="alls">
-                                    <input type="text" className='borderI' placeholder='Nombre' {...register("name", {required: true})} />
-                                    <input type="text" className='borderI' placeholder='Apellido' {...register("lastname", {required: true})} />
-                                    <input type="text" className='borderI' placeholder='Rut XXXXXXXXX-X' value={rut}  {...register("rut", { 
+                                    <input type="text" className='borderI' placeholder='Nombre' {...register("name", { required: true })} />
+                                    <input type="text" className='borderI' placeholder='Apellido' {...register("lastname", { required: true })} />
+                                    <input type="text" className='borderI' placeholder='Rut XXXXXXXXX-X' value={rut}  {...register("rut", {
                                         required: true,
                                         validate: (value) => {
-                                            if(value.length > 2) {
+                                            if (value.length > 2) {
                                                 const validate = validateRUT(value);
-                                                if(validate){
-                                                setValid(validate);
-                                                setValidRut("El rut ingresado es valido")
-                                                setErrosRut(false);
-                                                // setRut(value);
-                                                //setValue("rut", value);
-  
-                                                }else{
+                                                if (validate) {
+                                                    setValid(validate);
+                                                    setValidRut("El rut ingresado es valido")
+                                                    setErrosRut(false);
+                                                    // setRut(value);
+                                                    //setValue("rut", value);
+
+                                                } else {
                                                     //setValue("rut", "");
                                                     setValidRut("El rut ingresado no es valido")
                                                     setErrosRut(true);
                                                 }
-                                            
-                                            }else {
+
+                                            } else {
                                                 // setValue("rut", "");
                                                 setErrosRut(true);
-                                            } 
+                                            }
                                         }
                                     })} />
                                     <span style={{
@@ -273,27 +273,28 @@ export const ModalsR = () => {
                                         fontWeight: 'bold',
                                         color: 'white',
                                     }}>{emailError}</span>
-                                    <input type="number" className='borderI' placeholder='Telefono' {...register("telefono", {required: true, 
+                                    <input type="number" className='borderI' placeholder='Telefono' {...register("telefono", {
+                                        required: true,
                                         validate: (value) => {
-                                            if(value.length === 8){
+                                            if (value.length === 8) {
                                                 setErrorTel(false);
                                                 setErrTel("Numero Valido");
-                                            }else{
+                                            } else {
                                                 setErrorTel(true);
                                                 setErrTel("Error, numero de telefono debe tener 8 digitos, sin el 9")
                                             }
                                         }
-                                    })}/>
+                                    })} />
                                     <span style={{
                                         fontWeight: 'bold',
                                         color: 'white',
                                     }}>{errTel}</span>
                                     <input type="text" className='borderI' placeholder='Cabañas' value={cabañas} style={{ display: 'none' }} />
-                                    <input type="number" className='borderI' placeholder='Cantidad de Personas' {...register("personas", {required: true})} />
+                                    <input type="number" className='borderI' placeholder='Cantidad de Personas' {...register("personas", { required: true })} />
                                     <spam className="spam_text" style={{
                                         fontWeight: 'bold',
                                         color: 'white'
-                                    }}>El horario de Check In es a partir de las 15 hrs</spam>
+                                    }}>El horario de Check In debe ser superior a las 15 hrs</spam>
                                     <TimePicker
                                         disabledTime={disabledDateTime}
                                         format={format}
@@ -322,11 +323,11 @@ export const ModalsR = () => {
                                     <div className="children">
                                         <label for="mascotas" className="cantD">Viene con mascotas?</label>
                                         <Checkbox onChange={(e) => setMascotas(e.target.checked)} />
-                                    </div> 
+                                    </div>
 
-                                    
+
                                     <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail || errorTel} />
-                                    
+
                                 </form>
                             </div>
                         </div>

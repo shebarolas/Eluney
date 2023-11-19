@@ -41,6 +41,7 @@ export const ModalsL = () => {
     const [errTel, setErrTel] = useState();
     const [errorEmail, setErrorEmail] = useState(true);
     const [errosFecha, setErrosFecha] = useState(true);
+    const [isLoading, setIsLoading] = useState(false);
     const toast = useToast()
 
     const {
@@ -89,7 +90,7 @@ export const ModalsL = () => {
             valid: valid
         }
 
-
+        setIsLoading(true);
 
 
          await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
@@ -122,7 +123,10 @@ export const ModalsL = () => {
              }
          }).catch((err) => {
              console.log(err);
+         }).finally(() => {
+            setIsLoading(false);
          });
+
     }
 
     
@@ -148,7 +152,7 @@ export const ModalsL = () => {
 
         if(e.$H < 15){
             setCheckIn('');
-            setValidFecha('Check In superior a las 15 Hrs');
+            setValidFecha('Check In debe ser superior a las 15hrs');
             setErros(true);
         }else{
             setCheckIn(e.$H + ":" + "00");
@@ -215,7 +219,7 @@ export const ModalsL = () => {
                                     El Checkin para las cabañas debe ser despues de las 15:00 hrs.
                                 </span>
                                 <span className="cabInfo">
-                                    Todas las mañanas se sirve un desayuno a la carta.
+                                 Todas las mañanas se sirve un desayuno a la carta (El desayuno lleva un coste adicional)
                                 </span>
                                 <Acordings />
                             </div>
@@ -287,7 +291,7 @@ export const ModalsL = () => {
                                     <spam className="spam_text" style={{
                                         fontWeight: 'bold',
                                         color: 'white'
-                                    }}>El horario de Check In es a partir de las 15 hrs</spam>
+                                    }}>El horario de Check In debe ser superior a las 15 hrs</spam>
                                     <TimePicker
                                         disabledTime={disabledDateTime}
                                         format={format}
@@ -319,7 +323,7 @@ export const ModalsL = () => {
                                     </div> 
 
                                     
-                                    <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail} />
+                                    <Alert onSubmit={handleSubmit(onSubmit)} isValid={!formState.isValid || errosRut || errorEmail} isLoading={isLoading}/>
                                     
                                 </form>
                             </div>

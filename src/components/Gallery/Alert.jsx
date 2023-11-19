@@ -11,7 +11,7 @@ import {
     Button,
   } from '@chakra-ui/react'
 
-export const Alert = ({onSubmit, isValid}) => {
+export const Alert = ({onSubmit, isValid, isLoading}) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const cancelRef = React.useRef()
     console.log(isValid)
@@ -32,15 +32,15 @@ export const Alert = ({onSubmit, isValid}) => {
               </AlertDialogHeader>
   
               <AlertDialogBody>
-                ¿Esta seguro de realizar la reservación?
-                Una vez se envie el formulario le llegará un email de recepción
+                ¿Esta seguro de realizar la reserva?
+                Una vez se envie el formulario le llegará un email de confirmación
               </AlertDialogBody>
   
               <AlertDialogFooter>
                 <Button ref={cancelRef} onClick={onClose}>
                   Cancelar
                 </Button>
-                <Button colorScheme='green' onClick={onSubmit} ml={3}>
+                <Button colorScheme='green' isLoading={isLoading} onClick={onSubmit} ml={3} className='click'>
                   Enviar
                 </Button>
               </AlertDialogFooter>
