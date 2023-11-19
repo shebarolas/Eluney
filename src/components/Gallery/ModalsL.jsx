@@ -89,7 +89,7 @@ export const ModalsL = () => {
             dias: dias,
             valid: valid
         }
-
+        setIsLoading(true);
 
          await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
              method: "POST",

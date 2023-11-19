@@ -37,7 +37,7 @@ export const Alert = ({onSubmit, isValid, isLoading}) => {
               </AlertDialogBody>
   
               <AlertDialogFooter>
-                <Button ref={cancelRef} onClick={onClose}>
+                <Button ref={cancelRef} isLoading={isLoading} onClick={onClose}>
                   Cancelar
                 </Button>
                 <Button colorScheme='green' isLoading={isLoading} onClick={onSubmit} ml={3} className='click'>

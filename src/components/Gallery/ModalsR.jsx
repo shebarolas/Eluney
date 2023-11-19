@@ -90,7 +90,7 @@ export const ModalsR = () => {
         }
 
 
-
+        setIsLoading(true);
 
         await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
             method: "POST",
@@ -122,6 +122,8 @@ export const ModalsR = () => {
             }
         }).catch((err) => {
             console.log(err);
+        }).finally(() => {
+            setIsLoading(false);
         });
     }
 
