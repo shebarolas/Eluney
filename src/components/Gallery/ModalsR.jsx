@@ -41,6 +41,7 @@ export const ModalsR = () => {
     const [errorEmail, setErrorEmail] = useState(true);
     const [errorTel, setErrorTel] = useState(true);
     const [errTel, setErrTel] = useState();
+    const [isLoading, setIsLoading] = useState(false);
     const [errosFecha, setErrosFecha] = useState(true);
 
     const {
