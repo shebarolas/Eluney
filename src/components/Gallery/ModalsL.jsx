@@ -90,7 +90,7 @@ export const ModalsL = () => {
         }
         setIsLoading(true);
 
-         await fetch(`https://guiltless-good-linseed.glitch.me/massage/enviar`, {
+         await fetch(`https://cababack1.onrender.com/massage/enviar`, {
              method: "POST",
              body: JSON.stringify(dataSend),
              headers: {
