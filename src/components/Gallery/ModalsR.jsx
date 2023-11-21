@@ -116,6 +116,7 @@ export const ModalsR = () => {
                 
                 toast({
                     position: 'top',
+                    duration: 3000,
                     render: () => (
                         <AlerRej />
                     )

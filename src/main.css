@@ -220,3 +220,6 @@ body{
 .ant-picker-now-btn{
     display: none !important;
 }
+.ant-picker-time-panel-cell-disabled{
+    display: none !important;
+}
