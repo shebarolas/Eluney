@@ -14,10 +14,10 @@ export const AlerRej = () => {
         isOpen: isVisible,
         onClose,
         onOpen,
-      } = useDisclosure({ defaultIsOpen: true })
-    
-  return isVisible && (
-    <>
+    } = useDisclosure({ defaultIsOpen: true })
+
+    return isVisible && (
+        <>
             <Alert
                 status='error'
                 variant='subtle'
@@ -35,9 +35,9 @@ export const AlerRej = () => {
                     No se ha podido enviar el formulario, existen datos incompletos o invalidos, verificar rut y horario de Check In!!!!!!
                 </AlertDescription>
                 <Button colorScheme='red' onClick={onClose}>
-                    Ok
+                    <a href="/">OK</a>
                 </Button>
             </Alert>
         </>
-  )
+    )
 }
