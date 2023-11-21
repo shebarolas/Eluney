@@ -4,10 +4,19 @@ import {
     AlertIcon,
     AlertTitle,
     AlertDescription,
+    Button
 } from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 export const AlerRej = () => {
-  return (
+    const {
+        isOpen: isVisible,
+        onClose,
+        onOpen,
+      } = useDisclosure({ defaultIsOpen: true })
+    
+  return isVisible && (
     <>
             <Alert
                 status='error'
@@ -25,6 +34,9 @@ export const AlerRej = () => {
                 <AlertDescription maxWidth='sm'>
                     No se ha podido enviar el formulario, existen datos incompletos o invalidos, verificar rut y horario de Check In!!!!!!
                 </AlertDescription>
+                <Button colorScheme='red' onClick={onClose}>
+                    Ok
+                </Button>
             </Alert>
         </>
   )

@@ -4,10 +4,18 @@ import {
     AlertIcon,
     AlertTitle,
     AlertDescription,
+    Button
 } from '@chakra-ui/react'
+import { useDisclosure } from '@chakra-ui/react'
 
 export const AlertConf = () => {
-    return (
+    const {
+        isOpen: isVisible,
+        onClose,
+        onOpen,
+      } = useDisclosure({ defaultIsOpen: true })
+    return isVisible && (
+        
         <>
             <Alert
                 status='success'
@@ -25,6 +33,9 @@ export const AlertConf = () => {
                 <AlertDescription maxWidth='sm'>
                     La reserva se ha realizado de manera exitosa, por favor revise su correo electronico.
                 </AlertDescription>
+                <Button colorScheme='green'>
+                    <a href="/">OK</a>
+                </Button>
             </Alert>
         </>
     )

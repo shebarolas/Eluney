@@ -106,14 +106,10 @@ export const ModalsL = () => {
                          <AlertConf />
                      ),
                  })
-                 setTimeout(() => {
-                     window.location.href = "/";
-                 }, 2000);
              }else{
                  
                  toast({
                      position: 'top',
-                     duration: 3000,
                      render: () => (
                          <AlerRej/>
                      )
@@ -212,6 +208,7 @@ export const ModalsL = () => {
                                     Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón, a unos 32 km de la cascada Ojos del Caburgua.
                                     Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 </span>
+                                <span className='cabInfo blod'>2 dormitorios</span>
                                 <span className='cabInfo blod'>Valor Referencial: 70.000 clp</span>
                                 <span className="cabInfo blod">
                                     El Checkin para las cabañas debe ser despues de las 15:00 hrs.

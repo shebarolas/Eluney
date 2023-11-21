@@ -220,6 +220,7 @@ export const ModalsR = () => {
                                     a 45 km del parque nacional de Huerquehue.
                                     Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 </span>
+                                <span className='cabInfo blod'>1 dormitorios</span>
                                 <span className='cabInfo blod'>Valor Referencial: 60.000 clp</span>
                                 <span className="cabInfo blod">
                                     El Checkin para las cabañas debe ser despues de las 15:00 hrs.
