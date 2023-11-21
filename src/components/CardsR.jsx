@@ -21,7 +21,7 @@ export const CardsR = () => {
                         <Heading size='md'>Cabaña Laurel</Heading>
                         <Text>
                             <div className="disp">
-                                Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua.
+                                Cabaña Laurel ofrece vistas al jardín y alojamiento con balcón, a unos 32 km de la cascada Ojos del Caburgua.
                                 Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 Cabaña de 57 m2 para 4-5 personas, completamente amoblada
                             </div>
