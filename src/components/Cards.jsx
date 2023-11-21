@@ -24,7 +24,7 @@ export const Cards = () => {
                             Cabaña Coigue ofrece alojamiento con WiFi gratuita en Pucón, a 32 km de la cascada Ojos del Caburgua, a 42 km de Ski Pucón y
                             a 45 km del parque nacional de Huerquehue.
                             Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
-                            Cabaña de 36 m2 para 2-3 personas, completamente amoblada
+                            Cabaña de 36 m2 para 2-3 personas, completamente amoblada y con 1 dormitorio.
                             </div>
                         </Text>
                         <div className="cabaR">
@@ -32,7 +32,7 @@ export const Cards = () => {
                                 Cabaña Coigue ofrece alojamiento con WiFi gratuita en Pucón, a 32 km de la cascada Ojos del Caburgua, a 42 km de Ski Pucón y
                                 a 45 km del parque nacional de Huerquehue.
                                 Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
-                                Cabaña de 36 m2 para 2-3 personas, completamente amoblada
+                                Cabaña de 36 m2 para 2-3 personas, completamente amoblada y con 1 dormitorio.
                             </span>
                             <br />
                             <span className='cabInfo blod'>Valor Referencial: 60.000 clp</span>

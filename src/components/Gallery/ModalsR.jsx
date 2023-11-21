@@ -109,14 +109,10 @@ export const ModalsR = () => {
                         <AlertConf />
                     ),
                 })
-                setTimeout(() => {
-                    window.location.href = "/";
-                }, 2000);
             } else {
                 
                 toast({
                     position: 'top',
-                    duration: 3000,
                     render: () => (
                         <AlerRej />
                     )
