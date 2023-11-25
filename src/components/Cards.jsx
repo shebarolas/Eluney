@@ -35,7 +35,7 @@ export const Cards = () => {
                                 Cabaña de 36 m2 para 2-3 personas, completamente amoblada y con 1 dormitorio.
                             </span>
                             <br />
-                            <span className='cabInfo blod'>Valor Referencial: 60.000 clp</span>
+                            <span className='cabInfo blod'>Valor Referencial: 60.000 clp por noche.</span>
                             <br />
                             <span className="cabInfo blod">
                                 El Checkin para las cabañas debe ser despues de las 15:00 hrs.
