@@ -29,7 +29,7 @@ ServicioCaf = () => {
                 <SliderCafe/>
                 <span className="textCafe">
                     ¡Bienvenido a nuestra acogedora cafetería! Aquí encontrarás el lugar perfecto para relajarte y disfrutar de una deliciosa taza de café.
-                    Nuestro café recién molido y nuestras exquisitas opciones de bocadillos te harán regresar una y otra vez.
+                    Además podrás degustar nuestras exquisitas opciones de bocadillos te harán regresar una y otra vez.
                 </span>
             </div>
         </div>

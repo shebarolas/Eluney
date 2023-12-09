@@ -2,6 +2,7 @@ import React from 'react'
 import { Cards } from '../components/Cards'
 import '../styles/galeria.css'
 import { CardsR } from '../components/CardsR'
+import { CardsH } from '../components/CardsH'
 
 export const Galeria = () => {
     return (
@@ -11,6 +12,7 @@ export const Galeria = () => {
                 <div className="cards">
                     <Cards />
                     <CardsR />
+                    <CardsH/>
                 </div>
             </div>
         </div>

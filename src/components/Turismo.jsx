@@ -23,7 +23,7 @@ export const Turismo = () => {
                 <div className="imgSal">
                     <img className="salImg" src={terma} alt="salto1" />
                     <div className="textTu">
-                        <span>6 km. Termas de Plaguin</span>
+                        <span>6 km. Termas de Palguin</span>
                         <span>15 km. Termas de Menetue</span>
                         <span>14 km. Termas de Trancura</span>
                         <span>14 km. Termas de San Luis</span>
