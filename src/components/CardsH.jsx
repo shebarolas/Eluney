@@ -30,7 +30,7 @@ export const CardsH = () => {
                         </Text>
                         <div className="cabaR">
                             <span className="cabInfo">
-                                Cabaña Alerce ofrece vistas al jardín y alojamiento con balcón y hervidor de agua a unos 32 km de la cascada Ojos del Caburgua.
+                                Cabaña Alerce ofrece vistas al jardín y alojamiento con balcón, con hermosas vistas al bosque y a fauna silverstre, a unos 32 km de la cascada Ojos del Caburgua.
                                 Se encuentra a 26 km de Geometric Hot Springs y ofrece terraza y aparcamiento privado gratuito.
                                 Cabaña de 57 m2 para 4-5 personas, completamente amoblada y con 2 dormitorios
                             </span>
