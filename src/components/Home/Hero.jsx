@@ -9,15 +9,6 @@ export default function Hero() {
             <Sliders />
             <div id="home" className="info">
                 <div className="global">
-                    <div className="textoL">
-                        <motion.img className='logoss'
-                            initial={{ opacity: 0, scale: 0.5 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 2 }}
-                            src={logo}
-                        />
-                          
-                    </div>
                     <div className="textoR">
                         <motion.span
                             initial={{ opacity: 0, scale: 0.1 }}
